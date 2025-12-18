@@ -108,3 +108,43 @@ Y132S-4
     \item \RMN{4}轴输入转矩：
     \[ T_{\RMN{4}} = T_{\RMN{3}} \cdot \eta_c \cdot \eta_{\omega} = 1437.20 \, N \cdot m \]
 \end{itemize}
+
+\subsection{各轴输出功率计算 ($kW$)}
+\begin{itemize}
+    \item \RMN{1}轴输出功率：
+    \[ P_{\RMN{1}}^{ \text{'}} = P_1 \cdot \eta_1 \cdot \eta_2 = 5.18 \, kW \]
+    \item \RMN{2}轴输出功率：
+    \[ P_{ \RMN{2}} ^{ \text{'}}= P_{\RMN{2}} \cdot \eta_2 \cdot \eta_3 = 4.97 \, kW \]
+    \item \RMN{3}轴输出功率：
+    \[ P_{\RMN{3}} ^{ \text{'}}= P_{\RMN{3}} \cdot \eta_2 \cdot \eta_3 = 4.62 \, kW \]
+    \item \RMN{4}轴输出功率：
+    \[ P_{\RMN{4}} ^{ \text{'}}= P_{\RMN{4}} \cdot \eta_c \cdot \eta_{\omega} = 4.26 \, kW \]
+\end{itemize}
+
+\subsection{各轴输入转矩计算 ($N \cdot m$)}
+\begin{itemize}
+    \item \RMN{1}轴输出转矩：
+    \[ T_{\RMN{1}} = 9550  \frac{P_{\RMN{1}}^{ \text{'} }}{n_1} = 34.69 \, N \cdot m \]
+    \item \RMN{2}轴输出转矩：
+    \[ T_{\RMN{2}} = 9550  \frac{P_{\RMN{1}}^{ \text{'} }}{n_2} = 159.84 \, N \cdot m \]
+    \item \RMN{3}轴输出转矩：
+    \[ T_{\RMN{3}} = 9550  \frac{P_{\RMN{1}}^{ \text{'} }}{n_3} = 520.72 \, N \cdot m \]
+    \item \RMN{4}轴输出转矩：
+    \[ T_{\RMN{4}} = 9550  \frac{P_{\RMN{1}}^{ \text{'} }}{n_4} = 1408.46 \, N \cdot m \]
+\end{itemize}
+
+\subsection{汇总如下表}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|cc|cc|c|c|c|}
+    \hline
+        轴名 & 功率 P(kW) & ~ & 转矩 T (N·m) & ~ & 转速 n & 传动比 i & 效率 η \\ \hline
+        ~ & 输入 & 输出 & 输入 & 输出 & ~ & ~ & ~ \\ 
+        \hline
+        电机轴 & ~ & 5.5 & ~ & 36.48 & 1440 & 1 & 0.97 \\ 
+        \text{\RMN{1}}轴 & 5.34 & 5.18 & 35.75 & 34.69 & 1440 & ~ & ~ \\ 
+        \text{\RMN{2}}轴 & 5.07 & 4.97 & 163.1 & 159.84 & 300 & 4.8 & 0.98 \\ 
+        \text{\RMN{3}}轴 & 4.82 & 4.62 & 531.35 & 520.72 & 87.54 & 3.43 & 0.97 \\ 
+        \text{\RMN{4}}轴 & 4.35 & 4.26 & 1437.2 & 1408.46 & 29.18 & 3 & 0.94 \\ \hline
+    \end{tabular}
+\end{table}

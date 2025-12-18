@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'HebutThesis_example.blg'
-[24] biber-darwin:340> INFO - === Thu Dec 18, 2025, 11:38:35
-[30] Biber.pm:420> INFO - Reading 'HebutThesis_example.bcf'
-[64] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[69] bbl.pm:676> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
-[69] bbl.pm:779> INFO - Output to HebutThesis_example.bbl
-[69] Biber.pm:131> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
-[69] Biber.pm:133> INFO - WARNINGS: 1
-=======
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'HebutThesis_example.blg'
-[87] biber-MSWIN64:340> INFO - === 
-[120] Biber.pm:419> INFO - Reading 'HebutThesis_example.bcf'
-[220] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[230] bbl.pm:660> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
-[230] bbl.pm:763> INFO - Output to HebutThesis_example.bbl
-[230] Biber.pm:131> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
-[230] Biber.pm:133> INFO - WARNINGS: 1
->>>>>>> dd2d7faada8026d2b7c866dc2fb95534cdedcba0
+[24] biber-darwin:340> INFO - === Thu Dec 18, 2025, 15:05:47
+[31] Biber.pm:420> INFO - Reading 'HebutThesis_example.bcf'
+[65] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[70] bbl.pm:676> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
+[70] bbl.pm:779> INFO - Output to HebutThesis_example.bbl
+[70] Biber.pm:131> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
+[70] Biber.pm:133> INFO - WARNINGS: 1
