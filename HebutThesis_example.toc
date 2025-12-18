@@ -8,6 +8,7 @@
 \contentsline {section}{\numberline {2.1}电动机类型的选择}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}确定传动装置的效率}{3}{section.2.2}%
 \contentsline {section}{\numberline {2.3}选择电动机容量}{3}{section.2.3}%
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.3.1}工作机所需功率}{3}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}电动机所需额定功率}{3}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}确定电机型号}{3}{subsection.2.3.3}%
@@ -112,3 +113,106 @@
 \contentsline {chapter}{\numberline {9\hspace {.3em}}联轴器}{41}{chapter.9}%
 \contentsline {chapter}{\numberline {10\hspace {.3em}}润滑}{42}{chapter.10}%
 \contentsline {chapter}{\numberline {11\hspace {.3em}}箱体}{43}{chapter.11}%
+=======
+\contentsline {section}{\numberline {2.4}确定传动装置的总传动比和分配传动比}{3}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}总传动比的计算}{3}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}分配传动装置传动比}{3}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}动力学参数计算}{3}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}各轴转速}{3}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}各轴输入功率}{3}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}各轴输入转矩}{3}{subsection.2.5.3}%
+\contentsline {chapter}{\numberline {3\hspace {.3em}}减速器高速级齿轮传动设计计算}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}选定齿轮类型、精度等级、材料及齿数}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}齿轮类型与精度}{4}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}材料选择}{4}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}齿数选择}{4}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}按齿面接触疲劳强度设计}{4}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}设计公式}{4}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}确定公式中的各参数值}{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}试算小齿轮分度圆直径}{6}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}调整与模数计算}{6}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}确定传动尺寸}{6}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}计算中心距}{6}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}修正螺旋角}{7}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}计算分度圆直径}{7}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}计算齿宽}{7}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}按齿根弯曲疲劳强度校核}{7}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}校核公式}{7}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}确定各参数值}{7}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}校核计算}{8}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}齿轮传动主要几何尺寸总结}{8}{section.3.5}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}减速器低速级齿轮传动设计计算}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}选定齿轮类型、精度等级、材料及齿数}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}齿轮类型与精度}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}材料选择}{10}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}齿数选择}{10}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}按齿面接触疲劳强度设计}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}设计公式}{10}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}确定公式中的各参数值}{11}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}试算小齿轮分度圆直径}{12}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}调整与模数计算}{12}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}确定传动尺寸}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}计算中心距}{12}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}修正螺旋角}{13}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}计算分度圆直径}{13}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}计算齿宽}{13}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}按齿根弯曲疲劳强度校核}{13}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}校核公式}{13}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}确定各参数值}{13}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}校核计算}{14}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}齿轮传动主要几何尺寸总结}{14}{section.4.5}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}链传动设计计算}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}选定链轮齿数}{16}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}确定齿数}{16}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}确定计算功率}{16}{section.5.2}%
+\contentsline {section}{\numberline {5.3}选择链条型号和节距}{16}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}选用链号}{16}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}计算链节数和中心距}{16}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}初选中心距}{16}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}计算链节数}{17}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}计算实际中心距}{17}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}计算链速及确定润滑方式}{17}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}计算链速}{17}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}确定润滑方式}{17}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}计算压轴力}{18}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}有效圆周力}{18}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}压轴力}{18}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}主要设计结论}{18}{section.5.7}%
+\contentsline {chapter}{\numberline {6\hspace {.3em}}轴的设计计算}{19}{chapter.6}%
+\contentsline {section}{\numberline {6.1}高速轴设计计算}{19}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}轴的最小直径确定}{19}{subsection.6.1.1}%
+\contentsline {subsubsection}{按扭转强度确定轴的最小直径}{19}{subsection.6.1.1}%
+\contentsline {subsubsection}{确定轴的最小直径}{19}{equation.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}轴的结构设计}{20}{subsection.6.1.2}%
+\contentsline {subsubsection}{轴的结构图}{20}{subsection.6.1.2}%
+\contentsline {subsubsection}{轴的结构尺寸拟定}{20}{figure.caption.5}%
+\contentsline {subsection}{\numberline {6.1.3}轴的强度校核}{21}{subsection.6.1.3}%
+\contentsline {subsubsection}{计算齿轮受力}{21}{subsection.6.1.3}%
+\contentsline {subsubsection}{计算轴的载荷}{21}{equation.6.1.6}%
+\contentsline {subsubsection}{轴的强度校核}{24}{figure.caption.7}%
+\contentsline {section}{\numberline {6.2}中间轴设计计算}{24}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}轴的最小直径确定}{24}{subsection.6.2.1}%
+\contentsline {subsubsection}{按扭转强度确定轴的最小直径}{24}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}轴的结构设计}{25}{subsection.6.2.2}%
+\contentsline {subsubsection}{轴的结构图}{25}{subsection.6.2.2}%
+\contentsline {subsubsection}{轴的结构尺寸拟定}{25}{figure.caption.8}%
+\contentsline {subsection}{\numberline {6.2.3}轴的强度校核}{26}{subsection.6.2.3}%
+\contentsline {subsubsection}{计算齿轮受力}{26}{subsection.6.2.3}%
+\contentsline {subsubsection}{计算轴的载荷}{26}{subsection.6.2.3}%
+\contentsline {subsubsection}{轴的强度校核}{30}{figure.caption.10}%
+\contentsline {section}{\numberline {6.3}低速轴设计计算}{30}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}轴的最小直径确定}{30}{subsection.6.3.1}%
+\contentsline {subsubsection}{按扭转强度确定轴的最小直径}{30}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}轴的结构设计}{31}{subsection.6.3.2}%
+\contentsline {subsubsection}{轴的结构图}{31}{subsection.6.3.2}%
+\contentsline {subsubsection}{轴的结构尺寸拟定}{31}{figure.caption.11}%
+\contentsline {subsection}{\numberline {6.3.3}轴的强度校核}{32}{subsection.6.3.3}%
+\contentsline {subsubsection}{计算齿轮受力}{32}{subsection.6.3.3}%
+\contentsline {subsubsection}{计算轴的载荷}{32}{subsection.6.3.3}%
+\contentsline {subsubsection}{轴的强度校核}{36}{figure.caption.13}%
+\contentsline {chapter}{\numberline {7\hspace {.3em}}轴承}{37}{chapter.7}%
+\contentsline {chapter}{\numberline {8\hspace {.3em}}键}{38}{chapter.8}%
+\contentsline {chapter}{\numberline {9\hspace {.3em}}联轴器}{39}{chapter.9}%
+\contentsline {chapter}{\numberline {10\hspace {.3em}}润滑}{40}{chapter.10}%
+\contentsline {chapter}{\numberline {11\hspace {.3em}}箱体}{41}{chapter.11}%
+>>>>>>> dd2d7faada8026d2b7c866dc2fb95534cdedcba0
