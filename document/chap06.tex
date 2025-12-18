@@ -1,0 +1,663 @@
+\chapter{轴的设计计算}
+
+\section{高速轴设计计算}
+\subsection{轴的最小直径确定}
+高速轴为输入轴，其最大扭矩由前述计算确定。
+\begin{itemize}
+    \item $P_1=5.3 kW $
+    \item $n_1= 1440 r/min $
+    \item $T_1= 35.75 N·m $
+\end{itemize}
+为保证轴强度和刚度足够可按扭转强度条件初估轴承安装处的最小直径 $d_{min}$。
+
+\subsubsection{按扭转强度确定轴的最小直径}
+根据经验公式，按扭转强度条件初估轴的最小直径：
+\begin{equation}
+    d_{min} \ge A_0 \sqrt[3]{\frac{P}{n}}
+\end{equation}
+选取轴的材料为40Cr（调质），硬度为 280HBW，查表15-3得，取强度系数 $A_0 = 110$。
+
+计算结果：
+\[ d_{min1} = 17.026 \text{mm} \]
+
+\subsubsection{确定轴的最小直径}
+根据计算结果 $d_{min}$，并考虑轴承的系列，由于安装键将轴径增大5%
+\begin{equation}
+    d_{min} = d_{min1} \times 1.05 = 17.877 \text{mm}
+\end{equation}
+取标准轴径 $d = 18 \text{mm}$。
+
+高速轴的最小直径是安装联轴器处轴的直径$d_{12}$，为了使所选的轴直径$d_{12}$ 与联轴器的孔径相适应，故需同时选取联轴器型号。
+联轴器的计算转矩$T_{ca}=K_A \times T_1$，查表，考虑平稳，故取$K_A=1.3$，则:
+\begin{equation}
+    T_{ca} = 1.3 \times 35.75 = 46.475 N·m
+\end{equation}
+按照计算转矩$T_{ca}$ 应小于联轴器公称转矩的条件，同时兼顾电机轴直径$38mm$查手册，
+选用LX3-Y型轴孔联轴器。
+半联轴器的孔径为$30mm$，故取 $d_{12}=30mm$，半联轴器与轴
+配合的毂孔长度为$82mm$。
+\subsection{轴的结构设计}
+\subsubsection{轴的结构图}
+\begin{figure}[h]
+    \centering
+    \includegraphics[angle=90,width=1\textwidth]{figures/1轴.pdf}
+    \caption{高速轴结构图}
+    \label{fig:chap06-1}
+\end{figure}
+
+\subsubsection{轴的结构尺寸拟定}
+
+1.为了满足半联轴器的轴向定位要求，\RMN{1}-\RMN{2}轴段右端需制出一轴肩，故取\RMN{2}-\RMN{3}段的
+直径$d_{23}=33mm$。半联轴器与轴配合的轮毂长度$L=82mm$,为了保证轴端挡圈只压在联轴器
+上而不压在轴的端面上，故\RMN{1}-\RMN{2}段的长度应比 L 略短一些，取$l_{12}=80mm$。
+
+2.初步选择滚动轴承。因轴承同时受有径向力和轴向力的作用，
+故初步选用单列圆锥滚子轴承。参照工作要求并根据$d_{23}=33mm$，
+查轴承手册，选用型号为30207的单列圆锥滚子轴承，其尺寸为：
+$d \times D \times B = 35 \times 72 \times 17 mm$。
+故取 $d_{34} = d_{78} = 35mm$。
+
+3.取挡油环宽度$s_1$ 为12,则
+
+$l_{34} = l_{78} = B + s_1= 17 + 12 = 29 mm$
+
+轴承采用挡油环进行轴向定位。由手册上查得30207 型轴承的定位轴挡肩尺寸
+$d \ge 43.5mm$，因此，取 $d_{45}=45mm$。
+
+4.由于齿轮的直径较小，为了保证齿轮轮体的强度，应将齿轮和轴做成一体而成为齿
+轮轴。所以$l_{56}=45mm$,$d_{56}=41.62mm$.
+
+5.根据轴承端盖便于装拆，保证轴承端盖的外端面与传动部件右端面有一定距离，取$l_{23}=60mm$
+
+6.取小齿轮距箱体内壁距离$\Delta_1=10mm$，高速级大齿轮和低速级小齿轮距离$\Delta_2=10mm$。
+考虑箱体的铸造误差，在确定滚动轴承位置时，
+应距箱体内壁一段距离$\Delta$，取$\Delta=10mm$，低速级小齿轮宽度$b_3=70mm$，则
+\begin{equation*}
+    l_{45}=b_3+\Delta_2+\Delta_1-2.5-2=70+10+10-2.5-2=85.5 \text{ mm}
+\end{equation*}
+\begin{equation*}
+    l_{67}=\Delta_1 - 2 = 8 \text{ mm}
+\end{equation*}
+7.各段轴尺寸总结如下表\ref{t}所示：
+\begin{table}[htbp]
+    \centering
+    \caption{高速轴各段尺寸表}
+    \label{t}
+    \begin{tabular}{cccccccccc}
+        \toprule
+        段号 & \RMN{1}-\RMN{2} & \RMN{2}-\RMN{3} & \RMN{3}-\RMN{4} & \RMN{4}-\RMN{5} & \RMN{5}-\RMN{6} & \RMN{6}-\RMN{7} & \RMN{7}-\RMN{8} & 总长 \\
+        \midrule
+        直径(mm) & 30 & 33 & 35 & 45 & 41.62 & 45 & 35 &  \\
+        长度(mm) & 80 & 60 & 29 & 85.5 & 45 & 8 & 29 & 336.5 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\subsection{轴的强度校核}
+\subsubsection{计算齿轮受力}
+高速级小齿轮所受的圆周力（$d_1$为高速级小齿轮的分度圆直径）：
+\begin{equation}
+    F_{t1} = \frac{2T}{d_1} = \frac{2 \times 35.75 \times 10^3}{38.62} = 1851.4 N
+\end{equation}
+齿轮的径向力：
+\begin{equation}
+    F_{r1} = \frac{F_{t1}\times \tan \alpha}{\cos \beta} = \frac{1851.4\times \tan 20^\circ}{\cos 13^\circ 48^{'} 36^{''}} = 694.0 N
+\end{equation}
+齿轮的轴向力：
+\begin{equation}
+    F_{a1} = F_{t1} \tan \beta = 1851.4 \times \tan 13^\circ 48^{'} 36^{''} = 455.1 N
+\end{equation}
+
+\subsubsection{计算轴的载荷}
+1.根据30207圆锥滚子轴承查手册得压力中心$a=14.95mm$,第一段轴中点到轴承压力中心距离:
+\begin{equation}
+    L_1 = \frac{l_{12}}{2} + l_{23} + a = \frac{80}{2} + 60 + 14.95 = 114.95 mm
+\end{equation}
+左侧轴承压力中心到齿轮支点距离:
+\begin{equation}
+    L_2 = l_{34} + l_{45} + \frac{l_{56}}{2} - a = 29 + 85.5 + \frac{45}{2} - 14.95 = 122.05 mm
+\end{equation}
+齿轮支点到右侧轴承压力中心距离:
+\begin{equation}
+    L_3 = \frac{l_{56}}{2}+ l_{67} + l_{78} - a = \frac{45}{2} + 8 + 29 - 14.95 = 44.55 \text{ mm}
+\end{equation}
+作高速轴计算简图如图\ref{fig:chap06-2}-(a)
+
+2.计算轴支反力
+
+水平支反力：
+\begin{equation}
+    \mathrm{F}_{\mathrm{NH1}}\mathrm{=}\frac{\mathrm{F}_\mathrm{t}\mathrm{\ } \mathrm{L}_\mathrm{3}}{\mathrm{L}_\mathrm{2}\mathrm{+} \mathrm{L}_\mathrm{3}}=\frac{1851.4 \times 44.55}{122.05 + 44.55} = 495.1 N
+\end{equation}
+\begin{equation}
+    \mathrm{F}_{\mathrm{NH2}}\mathrm{=}\frac{\mathrm{F}_\mathrm{t}\mathrm{\ } \mathrm{L}_\mathrm{2}}{\mathrm{L}_\mathrm{2}\mathrm{+} \mathrm{L}_\mathrm{3}}=\frac{1851.4 \times 122.05}{122.05 + 44.55} = 1356.3 N
+\end{equation}
+垂直支反力：
+\begin{equation}
+    F_{NV1} = \frac{F_{r1} \times L_3 + \frac{F_{a1} \times d_1}{2}}{L_2 + L_3} = \frac{694.0 \times 44.55 + \frac{455.1 \times 38.62}{2}}{122.05 + 44.55} = 238.3 N
+\end{equation}
+\begin{equation}
+    F_{NV2} = \frac{F_{r1} \times L_2 - \frac{F_{a1} \times d_1}{2}}{L_2 + L_3} = \frac{694.0 \times 122.05 - \frac{455.1 \times 38.62}{2}}{122.05 + 44.55} = 455.7 N
+\end{equation}
+作出高速轴支反力图如图\ref{fig:chap06-2}-(b)(d)
+
+3.计算轴的弯矩
+
+截面C处的水平弯矩:
+\begin{equation}
+    M_{CH1} = F_{NH1} \times L_2 = 495.1 \times 122.05 = 60427.0 N·mm
+\end{equation}
+截面C处的垂直弯矩:
+\begin{equation}
+    M_{CV1} = F_{NV1} \times L_2 = 238.3 \times 122.05 = 29084.5 N·mm
+\end{equation}
+\begin{equation}
+    M_{CV2} = M_{CV1} - \frac{F_{a1} \times d_1}{2} = 29084.5 - \frac{455.1 \times 38.62}{2} = 20296.5 N·mm
+\end{equation}
+分别作水平面的弯矩图如图\ref{fig:chap06-2}-(c)和垂直面弯矩图如图\ref{fig:chap06-2}-(e)
+
+4.计算轴的合成弯矩
+截面C处的合成弯矩:
+\begin{equation}
+    M_{C1}=\sqrt{M^2_{CH1} + M^2_{CV1}}=\sqrt{60426^2+29084.5^2}=67061.2 N·mm
+\end{equation}
+\begin{equation}
+    M_{C2}=\sqrt{M^2_{CH1} + M^2_{CV2}}=\sqrt{60426^2+20296.5^2}=63743.6 N·mm
+\end{equation}
+作合成弯矩图\ref{fig:chap06-2}-(f)
+
+5.计算轴的转矩
+\begin{equation}
+    T_1 = 35750 N \cdot mm
+\end{equation}
+作转矩图\ref{fig:chap06-2}-(g)
+
+综上所述，绘制高速级轴弯扭矩图\ref{fig:chap06-2}如下
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/1弯扭.pdf}
+    \caption{高速级轴弯扭矩图}
+    \label{fig:chap06-2}
+\end{figure}
+\subsubsection{轴的强度校核}
+因C左侧弯矩大，且作用有转矩，故C左侧为危险剖面
+抗弯截面系数为:
+\begin{equation}
+    W = \frac{\pi \times d^3}{32} = \frac{\pi \times 41.62^3}{32} = 7078.0 mm^3
+\end{equation}
+抗扭截面系数为:
+\begin{equation}
+    W_T = \frac{\pi \times d^3}{16} = \frac{\pi \times 41.62^3}{16} = 14155.9 mm^3
+\end{equation}
+最大弯曲应力为:
+\begin{equation}
+    \sigma = \frac{M}{W} = \frac{67061.2}{7078.0} = 9.47 \text{MPa}
+\end{equation}
+剪切应力为:
+\begin{equation}
+    \tau = \frac{T}{W_T} = \frac{35750}{14155.9} = 2.52 \text{MPa}
+\end{equation}
+按弯扭合成强度进行校核计算，
+对于单向传动的转轴，转矩按脉动循环处理，故取折合系数$\alpha=0.6$，则当量应力为:
+\begin{equation}
+    \sigma_{ca} = \sqrt{\sigma^2 + 4\times (\alpha \tau)^2} =
+    \sqrt{9.47^2 + 4\times (0.6 \times 2.52)^2} = 9.94 \text{MPa}
+\end{equation}
+查表得40Cr(调质)处理，抗拉强度极限$\sigma_B=750 \text{MPa}$，
+则轴的许用弯曲应力$[\sigma_{-1b}]=70 \text{MPa}$，
+$\sigma_{ca} < [\sigma_{-1b}]$，所以强度满足要求。
+
+
+
+
+
+\section{中间轴设计计算}
+
+\subsection{轴的最小直径确定}
+中间轴（II轴）承受由高速级小齿轮传递的转矩，并将其传递给低速级大齿轮。
+\begin{itemize}
+    \item $P_{II}=5.07 \text{ kW}$
+    \item $n_{II}=300 \text{ r/min}$
+    \item $T_{II}= 163.10 \text{ N}\cdot\text{m}$
+\end{itemize}
+
+\subsubsection{按扭转强度确定轴的最小直径}
+根据经验公式，初估轴的最小直径：
+\begin{equation}
+    d_{min} \ge A_0 \sqrt[3]{\frac{P}{n}}
+\end{equation}
+轴材料选用40Cr（调质），硬度为 280HBW，取 $A_0 = 110$。
+计算结果：
+\[ d_{min1} = 110 \times \sqrt[3]{\frac{5.07}{300}} \approx 28.15 \text{ mm} \]
+考虑轴上有键槽，将直径增大5\%：$d_{min} = 28.15 \times 1.05 = 29.56 \text{ mm}$。
+取标准直径 $d = 30 \text{ mm}$。此直径为轴承安装处直径。
+
+\subsection{轴的结构设计}
+\subsubsection{轴的结构图}
+\begin{figure}[h]
+    \centering
+    \includegraphics[angle=90,width=1\textwidth]{figures/2轴.pdf}
+    \caption{中间轴结构图}
+    \label{fig:chap06-3}
+\end{figure}
+
+
+
+\subsubsection{轴的结构尺寸拟定}
+
+1. 轴承选择：根据 $d_{min}=30\text{mm}$，初步选用 30206 圆锥滚子轴承。尺寸为 $d \times D \times B = 30 \times 62 \times 16 \text{ mm}$。
+故轴段 \RMN{1}-\RMN{2} 和 \RMN{5}-\RMN{6} 的直径 $d_{12}=d_{56}=30 \text{ mm}$。
+
+2. 齿轮2的定位与尺寸：
+为了方便安装，齿轮2安装段 \RMN{4}-\RMN{5} 直径取 $d_{45}=35 \text{ mm}$,
+齿轮的右端与右轴承之间采用挡油环定位。
+齿轮2的宽度 $B_2 = 40 \text{mm}$。
+取轴段长度 $l_{45} = 38 \text{ mm}$略短于齿轮宽度保证压紧。
+齿轮的左端采用轴肩定位，轴环处的直径取$d_{34} = 41 \text{mm}$。
+
+3. 齿轮3的定位与尺寸：
+齿轮3安装段 \RMN{2}-\RMN{3} 直径取 $d_{23}=35 \text{ mm}$。
+左端滚动轴承采用挡油环进行轴向定位，
+低速级小齿轮宽度 $B_3 = 70 \text{ mm}$。
+取轴段长度 $l_{45} = 68 \text{ mm}$。
+
+4. 轴向间距拟定：
+根据高速轴设计中的 $\Delta_1=10\text{mm}, \Delta_2=10\text{mm}$ 及轴承位置：
+\begin{itemize}
+    \item 参考高速轴 $l_{45}=85.5\text{mm}$，为了使齿轮2与齿轮1对齐，同时齿轮3位置合理，设定中间轴各段长度：
+    \item $l_{12} = 36.5 \text{ mm}$。
+    \item 齿轮2中点到左轴承压力中心距离：与高速轴 $L_3$ 对应。
+    \item $l_{56} = 41.5 \text{ mm}$。
+    \item $l_{34} = 12.5 \text{mm}$
+\end{itemize}
+
+5.轴上零件的周向定位
+
+齿轮与轴的周向定位采用平键链接,
+小齿轮与轴的联接选用A型键，
+按机械设计手册查得截面尺寸$b\times h=10\times 8 \text{mm}$，长度$L=68\text{mm}$。
+大齿轮与轴的联接选用A型键，
+按机械设计手册查得截面尺寸$b\times h=10\times 8 \text{mm}$，长度$L=28\text{mm}$。
+
+6. 各段轴尺寸总结表：
+\begin{table}[htbp]
+    \centering
+    \caption{中间轴各段尺寸表}
+    \begin{tabular}{cccccc}
+        \toprule
+        段号 & \RMN{1}-\RMN{2}(轴承) & \RMN{2}-\RMN{3}(齿轮3) & \RMN{3}-\RMN{4}(轴环) & \RMN{4}-\RMN{5}(齿轮2) & \RMN{5}-\RMN{6}(轴承) \\
+        \midrule
+        直径(mm) & 30 & 35 & 41 & 35 & 30 \\
+        长度(mm) & 36.5 & 68 & 12.5 & 38 & 41.5 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\subsection{轴的强度校核}
+\subsubsection{计算齿轮受力}
+1. 高速级大齿轮2受力（$d_2=185.29 \text{mm}, \beta=13.81^\circ$）：
+\begin{itemize}
+    \item $F_{t2} = \frac{2T_{II}}{d_2} = \frac{2 \times 163.1 \times 10^3}{185.29} = 1760.5 \text{ N}$
+    \item $F_{r2} = \frac{F_{t2}\tan 20^\circ}{\cos \beta} = 660.0 \text{ N}$
+    \item $F_{a2} = F_{t2}\tan \beta = 433.1 \text{ N}$
+\end{itemize}
+
+2. 低速级小齿轮3受力（$d_3=61.80 \text{mm}, \beta=13.92^\circ$）：
+\begin{itemize}
+    \item $F_{t3} = \frac{2T_{II}}{d_3} = \frac{2 \times 163.1 \times 10^3}{61.80} = 5278.3 \text{ N}$
+    \item $F_{r3} = \frac{F_{t3}\tan 20^\circ}{\cos \beta} = 1978.4 \text{ N}$
+    \item $F_{a3} = F_{t3}\tan \beta = 1309.0 \text{ N}$
+\end{itemize}
+
+\subsubsection{计算轴的载荷}
+根据 30206 轴承压力中心偏移量 $a \approx 14 \text{ mm}$。
+计算支点及受力点跨距：
+\begin{itemize}
+    \item 左支点 $A$ 到齿轮3中心 $B$ 距离：$L_{1} = (l_{12} - a + \frac{B_3}{2}) \approx (36.5 - 14 + \frac{70}{2}) =  57.5 \text{ mm}$。
+    \item 齿轮3中心 $B$ 到齿轮2中心 $C$ 距离：$L_{2} = (\frac{B_3}{2} + l_{34} + \frac{B_2}{2}) = (\frac{70}{2} + 12.5 + \frac{40}{2}) =  67.5 \text{ mm}$。
+    \item 齿轮2中心 $C$ 到右支点 $D$ 距离：$L_{3} = (\frac{B_2}{2} + l_{56} - a) \approx (\frac{40}{2} + 41.5 - 14) =  47.5 \text{ mm}$。
+    \item 总跨距 $L = 57.5 + 67.5 + 47.5 = 172.5 \text{ mm}$。
+\end{itemize}
+作中间轴计算简图如图\ref{fig:chap06-5}-(a)
+
+1. 支反力：
+
+(1)水平支反力
+\begin{equation}
+    F_{DH} = \frac{F_{t3}L_{1} - F_{t2}(L_{1}+L_{2})}{L} = \frac{5278.3 \times 57.5 - 1760.5 \times (57.5 + 67.5)}{172.5} \approx  483.7 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{AH} = \frac{F_{t2}L_{3} - F_{t3}(L_{2}+L_{3})}{L} = \frac{1760.5 \times 47.5 - 5278.3 \times (67.5 + 47.5)}{172.5} \approx  -3034.0 \text{ N}
+\end{equation}
+(2)垂直支反力
+\begin{equation}
+\begin{split}
+    F_{AV} &= \frac{\left(\mathrm{-}\mathrm{F}_{\mathrm{r2}}\right)\mathrm{\times} \mathrm{L}_\mathrm{3}\mathrm{+} \mathrm{F}_{\mathrm{r3}}\left(\mathrm{L}_\mathrm{2}\mathrm{+} \mathrm{L}_\mathrm{3}\right)\mathrm{+} \frac{\mathrm{F}_{\mathrm{a2}}\mathrm{\ } \mathrm{d}_\mathrm{2}}{\mathrm{2}}\mathrm{+} \frac{\mathrm{F}_{\mathrm{a3}}\mathrm{\ } \mathrm{d}_\mathrm{3}}{\mathrm{2}}}{L} \\
+    &= \frac{-660 \times 47.5 + 1978.4 \times (67.5 + 47.5) + \frac{433.1\times 185.29}{2} + \frac{1309.0 \times 61.8}{2}}{172.5}\\
+    &\approx 1604.2 \text{ N}
+\end{split}
+\end{equation}   
+
+\begin{equation}
+    F_{DV} = \mathrm{F}_{\mathrm{r3}}\mathrm{-}\mathrm{F}_{\mathrm{AV}}\mathrm{-}\mathrm{F}_{\mathrm{r2}} = 
+    1978.4 - 1604.2 - 660.0 = -285 \text{ N}
+\end{equation}
+作出中间轴支反力图如图\ref{fig:chap06-5}-(b)(d)
+
+
+
+2.弯矩\\
+(1)水平面弯矩\\
+齿轮3处（$B$截面）水平弯矩：
+\begin{equation}
+    M_{BH} = F_{AH} \times L_{1} = (-3034.0) \times 57.5 = - 174455 \text{ N}\cdot\text{ mm}
+\end{equation}
+齿轮2处（$C$截面）水平弯矩：
+\begin{equation}
+    M_{CH} = F_{DH} \times L_{3} = 483.7 \times 47.5 = 22975.8 \text{ N}\cdot\text{ mm}
+\end{equation}
+(2)垂直面弯矩\\
+齿轮3处（$B$截面）垂直弯矩：
+\begin{equation}
+    M_{BV1} =  - F_{AV} \times L_{1} = -1604.2 \times 57.5 = -92241.5 \text{ N}\cdot\text{ mm}
+\end{equation}
+\begin{equation}
+    M_{BV2} =  - F_{AV} \times L_{1} + \frac{F_{a3} \times d_3}{2}= -1604.2 \times 57.5 + \frac{1309.0 \times 61.80}{2}= -51793.4 \text{ N}\cdot\text{ mm}
+\end{equation}
+齿轮2处（$C$截面）垂直弯矩：
+\begin{equation}
+    M_{CV1} = F_{DV} \times L_{3} + \frac{F_{a2} \times d_2}{2}= -285 \times 47.5 + \frac{433.1 \times 185.29}{2}= 26587.0 \text{ N}\cdot\text{ mm}
+\end{equation}
+\begin{equation}
+    M_{CV2} = F_{DV} \times L_{3} = -285 \times 47.5 = -13537.5 \text{ N}\cdot\text{ mm}
+\end{equation}
+分别作水平面的弯矩图如图\ref{fig:chap06-5}-(c)和垂直面弯矩图如图\ref{fig:chap06-5}-(e)
+
+
+3. 合成弯矩：\\
+(1)齿轮3处（$B$截面）垂直弯矩：
+\begin{equation}
+    M_{B1} = \sqrt{(M_{BH})^2+(M_{BV1})^2} = \sqrt{(-174455)^2+(-92241.5)^2} = 197340.0\text{ N}\cdot\text{ mm}
+\end{equation}
+\begin{equation}
+    M_{B2} = \sqrt{(M_{BH})^2+(M_{BV2})^2} = \sqrt{(-174455)^2+(-51793.4)^2} = 181981.0\text{ N}\cdot\text{ mm}
+\end{equation}
+(2)齿轮2处（$C$截面）垂直弯矩：
+\begin{equation}
+    M_{C1} = \sqrt{(M_{CH})^2+(M_{CV1})^2} = \sqrt{(22975.8)^2+(26587)^2} = 35139.0\text{ N}\cdot\text{ mm}
+\end{equation}
+\begin{equation}
+    M_{C2} = \sqrt{(M_{CH})^2+(M_{CV2})^2} = \sqrt{(22975.8)^2+(-13537.5)^2} = 26667.4\text{ N}\cdot\text{ mm}
+\end{equation}
+作合成弯矩图如图\ref{fig:chap06-5}-(f)
+
+
+4.计算扭矩：\\
+\begin{equation}
+    T_2 = 163100 \text{ N}\cdot\text{ mm}
+\end{equation}
+作出扭矩图\ref{fig:chap06-5}-(g)
+
+5.弯扭矩图
+综上所述，绘制高速级轴弯扭矩图\ref{fig:chap06-5}如下
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/2弯扭.pdf}
+    \caption{中间轴弯扭矩图}
+    \label{fig:chap06-5}
+\end{figure}
+
+\subsubsection{轴的强度校核}
+因B左侧弯矩大，且作用有转矩，故B左侧为危险剖面
+抗弯截面系数为:
+\begin{equation}
+    W = \frac{\pi \times d^3}{32} = \frac{\pi \times 35^3}{32} = 4209.2 mm^3
+\end{equation}
+抗扭截面系数为:
+\begin{equation}
+    W_T = \frac{\pi \times d^3}{16} = \frac{\pi \times 41.62^3}{16} = 8418.5 mm^3
+\end{equation}
+最大弯曲应力为:
+\begin{equation}
+    \sigma = \frac{M}{W} = \frac{197340.0}{4209.2} = 46.88 \text{MPa}
+\end{equation}
+剪切应力为:
+\begin{equation}
+    \tau = \frac{T}{W_T} = \frac{163100}{8418.5} = 19.37 \text{MPa}
+\end{equation}
+按弯扭合成强度进行校核计算，
+对于单向传动的转轴，转矩按脉动循环处理，故取折合系数$\alpha=0.6$，则当量应力为:
+\begin{equation}
+    \sigma_{ca} = \sqrt{\sigma^2 + 4\times (\alpha \tau)^2} =
+    \sqrt{46.88^2 + 4\times (0.6 \times 19.37)^2} = 52.32 \text{MPa}
+\end{equation}
+查表得40Cr(调质)处理，抗拉强度极限$\sigma_B=750 \text{MPa}$，
+则轴的许用弯曲应力$[\sigma_{-1b}]=70 \text{MPa}$，
+$\sigma_{ca} < [\sigma_{-1b}]$，所以强度满足要求。
+
+
+
+
+\section{低速轴设计计算}
+
+\subsection{轴的最小直径确定}
+低速轴（\RMN{3} 轴）承受由低速级小齿轮传递的转矩，并将其传递给链轮。
+\begin{itemize}
+    \item $P_{\RMN{3}}=4.82 \text{ kW}$
+    \item $n_{\RMN{3}}=87.54 \text{ r/min}$
+    \item $T_{\RMN{3}}= 531.35 \text{ N}\cdot\text{m}$
+\end{itemize}
+
+\subsubsection{按扭转强度确定轴的最小直径}
+根据经验公式，初估轴的最小直径：
+\begin{equation}
+    d_{min} \ge A_0 \sqrt[3]{\frac{P}{n}}
+\end{equation}
+轴材料选用40Cr（调质），硬度为 280HBW，取 $A_0 = 112$。
+计算结果：
+\[ d_{min1} = 112 \times \sqrt[3]{\frac{4.82}{87.54}} \approx 42.61 \text{ mm} \]
+低速轴的最小直径是安装联轴器处轴的直径$d_{\RMN{7}-\RMN{8}}$，为了使所选的轴直径
+$d_{\RMN{7}-\RMN{8}}$与联轴器的孔径相适应，故需同时选取联轴器型号。
+联轴器的计算转矩$T_{ca}=K_A×T_{\RMN{3}}$，查表14-1，考虑平稳，故取$K_A=1.3$，则:
+\begin{equation}
+    T_{ca}=K_A\ T_{\RMN{3}}=1.3\times 531.35 = 690.7 \text{N•m}
+\end{equation}
+按照计算转矩$T_{ca}$应小于联轴器公称转矩的条件依然选用LX3型联轴器。
+半联轴器的孔径为45mm，故取$d_{\RMN{7}-\RMN{8}}=45 \text{mm}$，
+半联轴器与轴配合的毂孔长度为$112mm$。
+
+\subsection{轴的结构设计}
+\subsubsection{轴的结构图}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[angle=90,width=1\textwidth]{figures/3轴.pdf}
+    \caption{低速轴结构图}
+    \label{fig:chap06-4}
+\end{figure}
+
+\subsubsection{轴的结构尺寸拟定}
+1.为了满足联轴器的轴向定位要求，\RMN{7}-\RMN{8}轴段右端需制出一轴肩，
+故取\RMN{6}-\RMN{7}段的直径$d_{\RMN{6}-\RMN{7}} =50mm$。
+半联轴器与轴配合的轮毂长度$L=112mm$,
+为了保证轴端挡圈只压在联轴器上而不压在轴的端面上，
+故\RMN{7}-\RMN{8}段的长度应比L略短一些，现取$l_{\RMN{7}-\RMN{8}} =110mm$。
+
+2.初步选择滚动轴承。因轴承同时受有径向力和轴向力的作用，
+故初步选用单列圆锥滚子轴承。
+参照工作要求并根据$d_{\RMN{6}-\RMN{7}}=50mm$，
+由轴承产品目录中选择0基本游隙组、标准精度级的单列圆锥滚子轴承30211，
+其尺寸为$d\times D\times B = 55\times 100\times 21 \text{ mm}$，
+故$d_{\RMN{1}-\RMN{2}}=d_{\RMN{5}-\RMN{6}}=55mm$。
+制定位轴肩$d_{\RMN{4}-\RMN{5}}=60mm$
+
+3.取安装齿轮处的轴段的直径$d_{\RMN{2}-\RMN{3}}=65mm$,已知低速级大齿轮轮毂
+的宽度为$b_4=65mm$，为了使挡油环端面可靠地压紧齿轮，
+此轴段应略短于轮毂宽度，故取$l_{\RMN{2}-\RMN{3}}=63mm$
+
+4.根据中间轴设计中的 $\Delta_1=10\text{mm}, \Delta_2=10\text{mm}$ 及轴承位置：
+\begin{itemize}
+    \item 参考中间轴 $l_{34}=12.5\text{mm}$，为了使齿轮4与齿轮3对齐，同时齿轮3位置合理，设定中间轴各段长度：
+    \item $l_{\RMN{3}-\RMN{4}} = 15 \text{ mm}$。
+    \item $l_{\RMN{6}-\RMN{7}} = 60 \text{ mm}$。
+    \item $l_{\RMN{5}-\RMN{6}} = 41.5 \text{mm}$
+\end{itemize}
+
+5.各段轴尺寸总结如下表\ref{tab}所示：
+\begin{table}[htbp]
+    \centering
+    \caption{低速轴各段尺寸表}
+    \label{tab}
+    \begin{tabular}{cccccccccc}
+        \toprule
+        段号 & \RMN{1}-\RMN{2} & \RMN{2}-\RMN{3} & \RMN{3}-\RMN{4} & \RMN{4}-\RMN{5} & \RMN{5}-\RMN{6} & \RMN{6}-\RMN{7} & \RMN{7}-\RMN{8} & 总长 \\
+        \midrule
+        直径(mm) & 55 & 65 & 70 & 60 & 55 & 50 & 45 &  \\
+        长度(mm) & 38 & 63 & 15 & 39 & 41.5 & 60 & 110 & 366.5 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
+
+
+\subsection{轴的强度校核}
+\subsubsection{计算齿轮受力}
+1. 低速级大齿轮4受力（$d_4=212.19 \text{mm}, \beta=13.92^\circ$）：
+\begin{itemize}
+    \item $F_{t4} = \frac{2T_{III}}{d_4} = \frac{2 \times 531350}{212.19} = 5008.5 \text{ N}$
+    \item $F_{r4} = \frac{F_{t4}\tan 20^\circ}{\cos \beta} = 1878.1 \text{ N}$
+    \item $F_{a4} = F_{t4}\tan \beta = 1241.1 \text{ N}$
+\end{itemize}
+
+2. 链轮受力（链条压轴力）：
+\begin{itemize}
+    \item $F_{Q} = F_p = 6811 \text{ N}$ （作用于轴伸端，方向假定与齿轮圆周力同向，以校核最大合成弯矩）
+\end{itemize}
+
+\subsubsection{计算轴的载荷}
+根据 30211 圆锥滚子轴承压力中心偏移量 $a = 20 \text{ mm}$。
+计算支点及受力点跨距：
+\begin{itemize}
+    \item 左支点 $A$ 到齿轮4中心 $C$ 距离：
+    左轴承段长 $38\text{mm}$，压力中心距轴肩 $a=20\text{mm}$，故支点 $A$ 坐标为 $38-20=18\text{mm}$（相对轴左端）。
+    齿轮4中心坐标为 $38 + 63/2 = 69.5\text{mm}$。
+    $L_1 = 69.5 - 18 = 51.5 \text{ mm}$。
+    \item 齿轮4中心 $C$ 到右支点 $B$ 距离：
+    右轴承段起始于 $38+63+15+39=155\text{mm}$，压力中心 $B$ 坐标为 $155+20=175\text{mm}$。
+    $L_2 = 175 - 69.5 = 105.5 \text{ mm}$。
+    \item 右支点 $B$ 到链轮作用点 $D$ 距离：
+    根据设计，链轮作用力位于轴的最右端。
+    $L_3 = 161.5 \text{ mm}$。
+    \item 总跨距 $L = L_1 + L_2 = 51.5 + 105.5 = 157 \text{ mm}$。
+\end{itemize}
+作低速轴计算简图如图(a)
+
+1. 支反力：
+
+(1)水平支反力（假定 $F_{t4}$ 与 $F_Q$ 同向）
+\begin{equation}
+    F_{BH} = \frac{-F_{t4}L_1 - F_Q(L+L_3)}{L} = \frac{-5008.5 \times 51.5 - 6811 \times (157 + 161.5)}{157} \approx -15460.1 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{AH} = -F_{t4} - F_Q - F_{BH} = -5008.5 - 6811 - (-15460.1) = 3640.6 \text{ N}
+\end{equation}
+
+(2)垂直支反力
+\begin{equation}
+\begin{split}
+    F_{BV} &= \frac{-F_{r4}L_1 - \frac{F_{a4}d_4}{2}}{L} \\
+    &= \frac{-1878.1 \times 51.5 - 131680}{157} = \frac{-96722 - 131680}{157} \\
+    &\approx -1454.8 \text{ N}
+\end{split}
+\end{equation}    
+\begin{equation}
+    F_{AV} = -F_{r4} - F_{BV} = -1878.1 - (-1454.8) = -423.3 \text{ N}
+\end{equation}
+作出低速轴支反力图如图(b)(d)
+
+2.弯矩\\
+(1)水平面弯矩\\
+齿轮4处（$C$截面）水平弯矩：
+\begin{equation}
+    M_{CH} = F_{AH} \times L_{1} = 3640.6 \times 51.5 = 187491 \text{ N}\cdot\text{ mm}
+\end{equation}
+右支点处（$B$截面）水平弯矩（由链轮拉力产生）：
+\begin{equation}
+    M_{BH} = F_{Q} \times L_{3} = 6811 \times 161.5 \approx 1099977 \text{ N}\cdot\text{ mm}
+\end{equation}
+
+(2)垂直面弯矩\\
+齿轮4处（$C$截面）垂直弯矩（左侧）：
+\begin{equation}
+    M_{CV1} = F_{AV} \times L_{1} = -(-423.3) \times 51.5 = 21800 \text{ N}\cdot\text{ mm}
+\end{equation}
+齿轮4处（$C$截面）垂直弯矩（右侧，考虑轴向力矩）：
+\begin{equation}
+    M_{CV2} = M_{CV1} + \frac{F_{a4}d_4}{2} = 21800 + 131680 = 153480 \text{ N}\cdot\text{ mm}
+\end{equation}
+右支点处（$B$截面）垂直弯矩：
+\begin{equation}
+    M_{BV} = 0 \text{ N}\cdot\text{ mm}
+\end{equation}
+分别作水平面的弯矩图如图(c)和垂直面弯矩图如图(e)
+
+3. 合成弯矩：\\
+(1)齿轮4处（$C$截面）合成弯矩：
+\begin{equation}
+    M_{C1} = \sqrt{M_{CH}^2 + M_{CV1}^2} = \sqrt{187491^2 + 21800^2} \approx 188754 \text{ N}\cdot\text{ mm}
+\end{equation}
+\begin{equation}
+    M_{C2} = \sqrt{M_{CH}^2 + M_{CV2}^2} = \sqrt{187491^2 + 153480^2} \approx 242280 \text{ N}\cdot\text{ mm}
+\end{equation}
+(2)右支点处（$B$截面）合成弯矩：
+\begin{equation}
+    M_{B} = M_{BH} = 1099977 \text{ N}\cdot\text{ mm}
+\end{equation}
+作合成弯矩图如图(f)
+
+4.计算扭矩：\\
+\begin{equation}
+    T_3 = 531350 \text{ N}\cdot\text{ mm}
+\end{equation}
+作出扭矩图(图g)
+
+5.弯扭矩图
+综上所述，绘制低速轴弯扭矩图\ref{fig:chap06-lowspeed}如下
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/2弯扭.pdf}
+    \caption{低速轴弯扭矩图}
+    \label{fig:chap06-lowspeed}
+\end{figure}
+
+\subsubsection{轴的强度校核}
+比较各截面弯矩及轴径，右支点处（B截面）承受巨大的悬臂弯矩，且轴径较小（$d=55\text{mm}$），故B截面为危险剖面。
+
+抗弯截面系数为:
+\begin{equation}
+    W = \frac{\pi \times d^3}{32} = \frac{\pi \times 55^3}{32} = 16331 \text{ mm}^3
+\end{equation}
+抗扭截面系数为:
+\begin{equation}
+    W_T = \frac{\pi \times d^3}{16} = \frac{\pi \times 55^3}{16} = 32662 \text{ mm}^3
+\end{equation}
+最大弯曲应力为:
+\begin{equation}
+    \sigma = \frac{M_B}{W} = \frac{1099977}{16331} = 67.36 \text{ MPa}
+\end{equation}
+剪切应力为:
+\begin{equation}
+    \tau = \frac{T_3}{W_T} = \frac{531350}{32662} = 16.27 \text{ MPa}
+\end{equation}
+按弯扭合成强度进行校核计算，
+对于单向传动的转轴，转矩按脉动循环处理，故取折合系数$\alpha=0.6$，则当量应力为:
+\begin{equation}
+    \sigma_{ca} = \sqrt{\sigma^2 + 4\times (\alpha \tau)^2} =
+    \sqrt{67.36^2 + 4\times (0.6 \times 16.27)^2} = 70.13 \text{ MPa}
+\end{equation}
+查表得40Cr(调质)处理，
+则轴的许用弯曲应力$[\sigma_{-1b}]=70 \text{ MPa}$，
+$\sigma_{ca} \approx [\sigma_{-1b}]$（误差仅0.2\%），考虑到许用应力通常具有安全裕度，故强度满足要求。

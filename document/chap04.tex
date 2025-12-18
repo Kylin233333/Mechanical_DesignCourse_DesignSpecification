@@ -1,0 +1,173 @@
+\chapter{减速器低速级齿轮传动设计计算}
+\section{选定齿轮类型、精度等级、材料及齿数}
+\subsection{齿轮类型与精度}
+根据传动方案，继续选用斜齿圆柱齿轮传动。
+\begin{itemize}
+    \item 压力角取标准值 $\alpha_n = 20^{\circ}$。
+    \item 初选螺旋角 $\beta = 14^{\circ}$。
+    \item 选用 8 级精度 (GB/T 10095-2008)。
+\end{itemize}
+\subsection{材料选择}
+保持与高速级一致：
+\begin{itemize}
+    \item 小齿轮：40Cr（调质），硬度 $280\text{HBS}$。
+    \item 大齿轮：45钢（调质），硬度 $240\text{HBS}$。
+\end{itemize}
+\subsection{齿数选择}
+选小齿轮齿数 $z_1 = 30$。
+根据前述计算得到的传动比 $i_2 = 3.43$，计算大齿轮齿数：
+\[ z_2 = z_1 \times i_2 = 30 \times 3.43 = 102.9 \]
+取 $z_2 = 103$。
+实际传动比 $i = \frac{103}{30} \approx 3.433$，传动比误差：
+\[ \Delta i = \frac{|3.433 - 3.43|}{3.43} \times 100\% = 0.08\% < 5\% \]
+误差允许。
+\section{按齿面接触疲劳强度设计}
+\subsection{设计公式}
+由设计手册公式 (10-24) 进行试算，小齿轮分度圆直径 $d_{1t}$ 应满足：
+\begin{equation}
+    d_{1t} \ge \sqrt[3]{\frac{2 K_{Ht} T_1}{\phi_d} \cdot \frac{u+1}{u} \cdot \left( \frac{Z_H Z_E Z_{\epsilon} Z_{\beta}}{[\sigma_H]} \right)^2}
+\end{equation}
+\subsection{确定公式中的各参数值}
+1. 计算小齿轮传递的转矩 $T_1$ \\
+根据前述计算，中间轴（低速级输入轴）输入功率 $P_2 = 5.07\text{kW}$，转速 $n_2 = 300\text{r/min}$。
+\[ T_1 = 163.10 \text{N}\cdot\text{m} = 163100 \text{N}\cdot\text{mm} \]
+
+2. 载荷系数 $K_{Ht}$ \\
+试选 $K_{Ht} = 1.3$。
+
+3. 齿宽系数 $\phi_d$ \\
+由表 10-8，选取齿宽系数 $\phi_d = 1.0$。
+
+4. 区域系数 $Z_H$ \\
+计算端面压力角 $\alpha_t$：
+\[ \alpha_t = \arctan\left(\frac{\tan 20^{\circ}}{\cos 14^{\circ}}\right) = 20.647^{\circ} \]
+计算基圆螺旋角 $\beta_b$：
+\[ \beta_b = \arctan(\tan 14^{\circ} \cdot \cos 20.647^{\circ}) = 13.12^{\circ} \]
+区域系数：
+\[ Z_H = \frac{2 \cos 13.12^{\circ}}{\sin 41.29^{\circ}} \approx 2.43 \]
+
+5. 弹性影响系数 $Z_E$ \\
+材料为钢，故 $Z_E = 189.8 \sqrt{\text{MPa}}$。
+
+6. 重合度系数 $Z_{\epsilon}$ \\
+端面重合度系数初步取 $Z_{\epsilon} \approx 0.78$。
+
+7. 螺旋角系数 $Z_{\beta}$ \\
+\[ Z_{\beta} = \sqrt{\cos 14^{\circ}} \approx 0.985 \]
+
+8. 接触疲劳许用应力 $[\sigma_H]$ \\
+由图 10-21c 查得接触疲劳极限：
+\[ \sigma_{H\lim1} = 600\text{MPa}, \quad \sigma_{H\lim2} = 550\text{MPa} \]
+计算应力循环次数 (工作寿命 10年，每年270天，每天16小时)：
+\[ N_1 = 60 n_2 j L_h = 60 \times 300 \times 1 \times (10 \times 270 \times 16) = 7.776 \times 10^8 \]
+\[ N_2 = \frac{N_1}{u} = \frac{7.776 \times 10^8}{3.43} \approx 2.27 \times 10^8 \]
+查图 10-19，取接触疲劳寿命系数 $K_{HN1} \approx 0.92$, $K_{HN2} \approx 0.95$。
+取失效概率 1\%，安全系数 $S_H = 1.0$。
+\[ [\sigma_H]_1 = \frac{600 \times 0.92}{1} = 552\text{MPa} \]
+\[ [\sigma_H]_2 = \frac{550 \times 0.95}{1} = 522.5\text{MPa} \]
+取较小值作为许用应力：
+\[ [\sigma_H] = 522.5\text{MPa} \]
+\subsection{试算小齿轮分度圆直径}
+代入公式计算：
+\begin{align}
+    d_{1t} 
+    & \ge \sqrt[3]{\frac{2 \times 1.3 \times 163100}{1.0} \cdot \frac{3.43+1}{3.43} \cdot \left( \frac{2.43 \times 189.8 \times 0.78 \times 0.985}{522.5} \right)^2} \nonumber \\
+    & = \sqrt[3]{547672 \cdot 0.446} \approx 62.5 \text{mm}
+\end{align}
+\subsection{调整与模数计算}
+计算法向模数：
+\[ m_n = \frac{d_{1t} \cos \beta}{z_1} = \frac{62.5 \times \cos 14^{\circ}}{30} \approx 2.02 \text{mm} \]
+考虑到与高速级模数 ($1.5\text{mm}$) 有所区分，初选标准模数：
+\[ m_n = 2.0 \text{mm} \]
+\section{确定传动尺寸}
+\subsection{计算中心距}
+\[ a = \frac{m_n(z_1 + z_2)}{2 \cos \beta} = \frac{2.0 \times (30 + 103)}{2 \cos 14^{\circ}} = \frac{266}{1.9406} \approx 137.06 \text{mm} \]
+圆整中心距为整数：
+\[ a = 137 \text{mm} \]
+\subsection{修正螺旋角}
+因中心距圆整，需反求精确的螺旋角 $\beta$：
+\[ \cos \beta = \frac{m_n(z_1 + z_2)}{2a} = \frac{2.0 \times 133}{2 \times 137} = 0.9708 \]
+\[ \beta = \arccos(0.9708) = 13.85^{\circ} = 13^{\circ}51' \]
+此值在 $8^{\circ} \sim 20^{\circ}$ 合理范围内。
+\subsection{计算分度圆直径}
+\[ d_1 = \frac{m_n z_1}{\cos \beta} = \frac{2.0 \times 30}{0.9708} = 61.81 \text{mm} \]
+\[ d_2 = \frac{m_n z_2}{\cos \beta} = \frac{2.0 \times 103}{0.9708} = 212.19 \text{mm} \]
+验证中心距：$a = (61.81 + 212.19)/2 = 137\text{mm}$，正确。
+\subsection{计算齿宽}
+\[ b = \phi_d \cdot d_1 = 1.0 \times 61.81 \approx 61.81 \text{mm} \]
+圆整并考虑安装误差，取：
+\begin{itemize}
+    \item 大齿轮齿宽 $B_2 = 65 \text{mm}$
+    \item 小齿轮齿宽 $B_1 = B_2 + 5 = 70 \text{mm}$
+\end{itemize}
+\section{按齿根弯曲疲劳强度校核}
+\subsection{校核公式}
+\begin{equation}
+    \sigma_F = \frac{2 K T_1 Y_{Fa} Y_{Sa} Y_{\epsilon} Y_{\beta}}{b m_n^2 z_1} \le [\sigma_F]
+\end{equation}
+\subsection{确定各参数值}
+1. 当量齿数 \\
+\[ z_{v1} = \frac{z_1}{\cos^3 \beta} = \frac{30}{0.9708^3} \approx 32.78 \]
+\[ z_{v2} = \frac{z_2}{\cos^3 \beta} = \frac{103}{0.9708^3} \approx 112.56 \]
+2. 齿形系数与应力修正系数 \\
+查表 10-5：
+\begin{itemize}
+    \item $Y_{Fa1} = 2.53, \quad Y_{Sa1} = 1.62$
+    \item $Y_{Fa2} = 2.18, \quad Y_{Sa2} = 1.79$
+\end{itemize}
+3. 许用弯曲应力 $[\sigma_F]$ \\
+由图 10-20c 查得：$\sigma_{F\lim1} = 500\text{MPa}, \sigma_{F\lim2} = 380\text{MPa}$。
+查图 10-18，寿命系数 $K_{FN1} \approx 0.88, K_{FN2} \approx 0.90$。
+取安全系数 $S_F = 1.4$。
+\[ [\sigma_F]_1 = \frac{500 \times 0.88}{1.4} = 314 \text{MPa} \]
+\[ [\sigma_F]_2 = \frac{380 \times 0.90}{1.4} = 244 \text{MPa} \]
+4. 载荷系数 $K$ \\
+取 $K = 1.6$。
+\subsection{校核计算}
+校核小齿轮：
+\begin{align}
+    \sigma_{F1} 
+    & = \frac{2 \times 1.6 \times 163100 \times 2.53 \times 1.62 \times 0.7 \times 0.9}{70 \times 2.0^2 \times 30} \nonumber \\
+    & \approx 124.5 \text{MPa} < [\sigma_F]_1 = 314 \text{MPa}
+\end{align}
+校核大齿轮：
+\[ \sigma_{F2} = \sigma_{F1} \frac{Y_{Fa2} Y_{Sa2}}{Y_{Fa1} Y_{Sa1}} = 124.5 \times \frac{2.18 \times 1.79}{2.53 \times 1.62} \approx 120.3 \text{MPa} < [\sigma_F]_2 \]
+结果表明，弯曲强度满足要求。
+\section{齿轮传动主要几何尺寸总结}
+表\ref{tab:low_speed_gear_dim} 为低速级齿轮的主要设计参数汇总。
+\begin{table}[h]
+\centering
+\caption{低速级齿轮主要结构尺寸}
+\label{tab:low_speed_gear_dim}
+\begin{tabular}{|c|c|c|c|}
+\toprule
+名称 & 代号 & 计算公式 & 数值 \\
+\hline
+法向模数 & $m_n$ & 设计选定 & $2.0 \text{mm}$ \\
+\hline
+齿数 & $z_1, z_2$ & 设计选定 & $30, 103$ \\
+\hline
+螺旋角 & $\beta$ & $\arccos[m_n(z_1+z_2)/2a]$ & $13^{\circ}51'$ \\
+\hline
+分度圆直径 & $d_1$ & $m_n z_1 / \cos \beta$ & $61.81 \text{mm}$ \\
+& $d_2$ & $m_n z_2 / \cos \beta$ & $212.19 \text{mm}$ \\
+\hline
+中心距 & $a$ & $(d_1+d_2)/2$ & $137 \text{mm}$ \\
+\hline
+齿宽 & $B_1$ & 设计确定 & $70 \text{mm}$ \\
+& $B_2$ & 设计确定 & $65 \text{mm}$ \\
+\hline
+齿顶高 & $h_a$ & $h_a^* m_n$ & $2.0 \text{mm}$ \\
+\hline
+齿根高 & $h_f$ & $(h_a^* + c^*) m_n$ & $2.5 \text{mm}$ \\
+\hline
+全齿高 & $h$ & $h_a + h_f$ & $4.5 \text{mm}$ \\
+\hline
+齿顶圆直径 & $d_{a1}$ & $d_1 + 2h_a$ & $65.81 \text{mm}$ \\
+& $d_{a2}$ & $d_2 + 2h_a$ & $216.19 \text{mm}$ \\
+\hline
+齿根圆直径 & $d_{f1}$ & $d_1 - 2h_f$ & $56.81 \text{mm}$ \\
+& $d_{f2}$ & $d_2 - 2h_f$ & $207.19 \text{mm}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

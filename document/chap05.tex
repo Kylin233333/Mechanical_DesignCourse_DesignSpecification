@@ -1,0 +1,114 @@
+\chapter{链传动设计计算}
+
+\section{选定链轮齿数}
+
+\subsection{确定齿数}
+根据传动比 $i=3.00$，取小链轮齿数 $z_1 = 21$。
+计算大链轮齿数：
+\[ z_2 = i \times z_1 = 3.00 \times 21 = 63 \]
+取 $z_2 = 63$。
+
+\section{确定计算功率}
+
+由表 9-6 查得工况系数。考虑到带式输送机载荷平稳，取 $K_A = 1.0$。
+计算主动链轮齿数系数 $K_z$：
+\[ K_z = \left( \frac{19}{z_1} \right)^{1.08} = \left( \frac{19}{21} \right)^{1.08} \approx 0.898 \]
+链传动输入功率（减速器输出功率）$P = 4.62 \text{kW}$。
+计算功率 $P_{ca}$：
+\begin{equation}
+    P_{ca} = K_A K_z P = 1.0 \times 0.898 \times 4.62 \approx 4.15 \text{kW}
+\end{equation}
+
+\section{选择链条型号和节距}
+
+\subsection{选用链号}
+根据 $P_{ca} = 4.15 \text{kW}$ 和小链轮转速 $n_1 = 87.54 \text{r/min}$，查图 9-11
+选用 16A 单排滚子链。
+查课本表 9-1，链条节距 $p = 25.4 \text{mm}$。
+
+\section{计算链节数和中心距}
+
+\subsection{初选中心距}
+初选中心距 $a_0 = (30 \sim 50)p$。
+取 $a_0 = 40p = 40 \times 25.4 = 1016 \text{mm}$，圆整取 $a_0 = 1000 \text{mm}$。
+
+\subsection{计算链节数}
+相应的链长节数 $L_{p0}$：
+\begin{align}
+    L_{p0} &= \frac{2a_0}{p} + \frac{z_1 + z_2}{2} + \left( \frac{z_2 - z_1}{2\pi} \right)^2 \frac{p}{a_0} \nonumber \\
+    &= \frac{2000}{25.4} + \frac{21 + 63}{2} + \left( \frac{63 - 21}{2\pi} \right)^2 \times \frac{25.4}{1000} \nonumber \\
+    &= 78.74 + 42 + 1.135 \approx 121.875
+\end{align}
+取链节数为偶数，故 $L_p = 122$。
+
+\subsection{计算实际中心距}
+查表 9-7，确定中心距计算系数 $f_1$。
+计算插值依据：
+\[ \frac{L_p - z_1}{z_2 - z_1} = \frac{122 - 21}{63 - 21} = \frac{101}{42} \approx 2.405 \]
+查表得：
+当 $\frac{L_p - z_1}{z_2 - z_1} = 2.4$ 时，$f_1 = 0.24643$。
+当 $\frac{L_p - z_1}{z_2 - z_1} = 2.5$ 时，$f_1 = 0.24678$。
+采用线性插值：
+\[ f_1 \approx 0.24643 + \frac{0.24678 - 0.24643}{2.5 - 2.4} \times (2.405 - 2.4) \approx 0.24645 \]
+链传动理论最大中心距 $a_{max}$：
+\begin{align}
+    a_{max} &= f_1 p [2L_p - (z_1 + z_2)] \nonumber \\
+    &= 0.24645 \times 25.4 \times [2 \times 122 - (21 + 63)] \nonumber \\
+    &= 6.2598 \times 160 \approx 1001.57 \text{mm}
+\end{align}
+取 $a \approx 1001 \text{mm}$。
+
+\section{计算链速及确定润滑方式}
+
+\subsection{计算链速}
+\begin{equation}
+    v = \frac{n_1 z_1 p}{60 \times 1000} = \frac{87.54 \times 21 \times 25.4}{60000} \approx 0.78 \text{m/s}
+\end{equation}
+
+\subsection{确定润滑方式}
+由 $v = 0.78 \text{m/s}$ 和链号 16A，查图 9-13。
+坐标点落在区域 I 和 II 的交界处，为保证润滑效果，选用 滴油润滑。
+
+\section{计算压轴力}
+
+\subsection{有效圆周力}
+\begin{equation}
+    F_t = \frac{1000 P}{v} = \frac{1000 \times 4.62}{0.78} \approx 5923 \text{N}
+\end{equation}
+
+\subsection{压轴力}
+链轮水平布置，取压轴力系数 $K_{fp} = 1.15$。
+\begin{equation}
+    F_p \approx K_{fp} F_t = 1.15 \times 5923 \approx 6811 \text{N}
+\end{equation}
+
+\section{主要设计结论}
+
+表\ref{tab:chain_drive_summary}为链传动的主要设计参数汇总。
+
+\begin{table}[h]
+\centering
+\caption{链传动主要参数}
+\label{tab:chain_drive_summary}
+\begin{tabular}{|c|c|c|}
+\hline
+名称 & 符号 & 数据 \\
+\hline
+链条型号 & - & 16A (单排) \\
+\hline
+节距 & $p$ & $25.4 \text{mm}$ \\
+\hline
+小链轮齿数 & $z_1$ & 21 \\
+\hline
+大链轮齿数 & $z_2$ & 63 \\
+\hline
+链节数 & $L_p$ & 122 \\
+\hline
+中心距 & $a$ & $1001 \text{mm}$ \\
+\hline
+压轴力 & $F_p$ & $6811 \text{N}$ \\
+\hline
+润滑方式 & - & 滴油润滑 \\
+\hline
+\end{tabular}
+\end{table}
