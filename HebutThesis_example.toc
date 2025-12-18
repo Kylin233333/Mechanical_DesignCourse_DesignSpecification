@@ -76,13 +76,13 @@
 \contentsline {section}{\numberline {6.1}高速轴设计计算}{19}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}轴的最小直径确定}{19}{subsection.6.1.1}%
 \contentsline {subsubsection}{按扭转强度确定轴的最小直径}{19}{subsection.6.1.1}%
-\contentsline {subsubsection}{确定轴的最小直径}{19}{equation.6.1}%
+\contentsline {subsubsection}{确定轴的最小直径}{19}{equation.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}轴的结构设计}{20}{subsection.6.1.2}%
 \contentsline {subsubsection}{轴的结构图}{20}{subsection.6.1.2}%
 \contentsline {subsubsection}{轴的结构尺寸拟定}{20}{figure.caption.5}%
 \contentsline {subsection}{\numberline {6.1.3}轴的强度校核}{21}{subsection.6.1.3}%
 \contentsline {subsubsection}{计算齿轮受力}{21}{subsection.6.1.3}%
-\contentsline {subsubsection}{计算轴的载荷}{21}{equation.6.6}%
+\contentsline {subsubsection}{计算轴的载荷}{21}{equation.6.1.6}%
 \contentsline {subsubsection}{轴的强度校核}{24}{figure.caption.7}%
 \contentsline {section}{\numberline {6.2}中间轴设计计算}{24}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}轴的最小直径确定}{24}{subsection.6.2.1}%
