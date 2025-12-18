@@ -4,18 +4,107 @@
 \section{确定传动装置的效率}
 查表得：
 \begin{itemize}
-    \item 联轴器的效率：$\eta_{1}=0.99$
-    \item 滚动轴承的效率：$\eta_{2}=0.99$
+    \item 链传动的效率：$\eta_{1}=0.93$
+    \item 滚动轴承的效率：$\eta_{2}=0.98$
     \item 闭式圆柱齿轮的效率：$\eta_{3}=0.97$
-    \item 链传动的效率：$\eta_{c}=0.96$
-    \item 工作机的效率：$\eta_{\omega}=0.97$
+    \item 联轴器的效率：$\eta_{c}=0.99$
+    \item 工作机的效率：$\eta_{\omega}=0.96$
 \end{itemize}
 
+\begin{equation}
+    \eta_a = \eta_1 \times \eta_2^4 \times \eta_3^2 \times \eta_c^2 \times \eta_{\omega}
+    = 0.93 \times 0.98^4 \times 0.97^2 \times 0.99^2 \times 0.96 \approx 0.7588
+\end{equation}
+
 \section{选择电动机容量}
+\subsection{工作机所需功率}
+\begin{equation}
+    P_w = \frac{Fv}{1000} = 3.08 \text{ kW}
+\end{equation}
+\subsection{电动机所需额定功率}
+\begin{equation}
+    P_d = \frac{P_w}{\eta_a} = 4.05 \text{ kW}
+\end{equation}
+\subsection{确定电机型号}
+传送带轮转速为：
+\begin{equation}
+    n = \frac{60\times 1000 v}{\pi D} = 29.178 \text{ r/min}
+\end{equation}
+按推荐的传动⽐合理范围,电动机转速的可选范围:
+\begin{equation}
+    n_d^{\text{'}} = i_a^{\text{'}} \times n = (16 ~ 240) \times 29.178 = (466.8 ~ 7002.7) \text{ r/min}
+\end{equation}
+
+综合考虑电动机和传动装置的尺⼨、重量、价格和链传动、减速器的传动⽐，选用电机型号为
+Y132S-4
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{cccccc}
+    \hline
+        功率 & 极数 & 电机机座号 & 安装型式 & 转速(r/min) & 电流(A) \\ \hline
+        5.5 & 4 & 132S & B3 & 1440 & 11.6 \\ 
+    \toprule
+        效率(\%) & 功率因数 & 额定电流 & 堵转转矩/额定转矩 & 最大转矩/额定转矩 & 重量(kg) \\ \hline
+        85.5 & 0.84 & 7 & 2.2 & 2.3 & 68 \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/dianji.png}
+    \caption{电机尺寸图}
+\end{figure}
+\begin{table}[h]
+\centering
+\caption{电机尺寸表（单位：mm）}
+\begin{tabular}{ccccccccccccccc}
+\toprule
+型号 & $H$ & $A$ & $B$ & $C$ & $D$ & $E$ & $F\times GD$ & $G$ & $K$ & $b$ & $b_1$ & $b_2$ & $h$ & $L$ \\
+\midrule
+132S & 132 & 216 & 140 & 89 & 38 & 80 & $10\times 8$ & 33 & $\phi 12$ & 280 & 210 & 135 & 315 & 475 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
 \section{确定传动装置的总传动比和分配传动比}
 \subsection{总传动比的计算}
 \subsection{分配传动装置传动比}
 \section{动力学参数计算}
-\subsection{各轴转速}
-\subsection{各轴输入功率}
-\subsection{各轴输入转矩}
+
+\subsection{各轴转速计算}
+已知电动机满载转速 $n_m = 1440 r/min$，各级传动比为 $i_{1}=4.80, i_{2}=3.42, i_{c}=3.00$。
+\begin{itemize}
+    \item \RMN{1}轴（高速轴）转速：
+    \[ n_{\RMN{1}} = n_m = 1440 \, r/min \]
+    \item \RMN{2}轴（中间轴）转速：
+    \[ n_{\RMN{2}} = \frac{n_I}{i_1} = \frac{1440}{4.80} = 300 \, r/min \]
+    \item \RMN{3}轴（低速轴）转速：
+    \[ n_{\RMN{3}} = \frac{n_{\RMN{2}}}{i_2} = \frac{409.09}{3.42} = 87.54 \, r/min \]
+    \item \RMN{4}轴（工作机轴）转速：
+    \[ n_{\RMN{4}} = \frac{n_{\RMN{3}}}{i_c} = \frac{95.36}{3.00} = 29.18 \, r/min \]
+\end{itemize}
+
+\subsection{各轴输入功率计算 ($kW$)}
+已知电动机输出功率 $P_m = 5.5 \, kW$。
+\begin{itemize}
+    \item \RMN{1}轴输入功率：
+    \[ P_{\RMN{1}} = P_m \cdot \eta_1 \cdot \eta_2 = 5.34 \, kW \]
+    \item \RMN{2}轴输入功率：
+    \[ P_{\RMN{2}} = P_{\RMN{1}} \cdot \eta_2 \cdot \eta_3 = 5.07 \, kW \]
+    \item \RMN{3}轴输入功率：
+    \[ P_{\RMN{3}} = P_{\RMN{2}} \cdot \eta_2 \cdot \eta_3 = 4.82 \, kW \]
+    \item \RMN{4}轴输入功率：
+    \[ P_{\RMN{4}} = P_{\RMN{3}} \cdot \eta_c \cdot \eta_{\omega} = 4.35 \, kW \]
+\end{itemize}
+
+\subsection{各轴输入转矩计算 ($N \cdot m$)}
+\begin{itemize}
+    \item \RMN{1}轴输入转矩：
+    \[ T_{\RMN{1}} = T_m \cdot \eta_1 \cdot \eta_2 = 35.75 \, N \cdot m \]
+    \item \RMN{2}轴输入转矩：
+    \[ T_{\RMN{2}} = T_{\RMN{1}} \cdot \eta_2 \cdot \eta_3 = 163.10 \, N \cdot m \]
+    \item \RMN{3}轴输入转矩：
+    \[ T_{\RMN{3}} = T_{\RMN{2}} \cdot \eta_2 \cdot \eta_3  = 531.35 \, N \cdot m \]
+    \item \RMN{4}轴输入转矩：
+    \[ T_{\RMN{4}} = T_{\RMN{3}} \cdot \eta_c \cdot \eta_{\omega} = 1437.20 \, N \cdot m \]
+\end{itemize}

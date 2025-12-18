@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.31)  18 DEC 2025 09:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.31)  18 DEC 2025 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,15 +1545,31 @@ File: figures/1.png Graphic file (type bmp)
 
 [2]
 2
-) (./document/chap03.tex
+
 
 [3
 
 ]
+Overfull \hbox (40.25935pt too wide) in paragraph at lines 42--50
+ [][] 
+ []
+
+File: figures/dianji.png Graphic file (type bmp)
+<figures/dianji.png>
+
+Overfull \hbox (14.29805pt too wide) in paragraph at lines 59--66
+ [][] 
+ []
+
+
+
+[4]) (./document/chap03.tex
+
+[5]
 3
 
 
-[4
+[6
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 42--48
@@ -1562,28 +1578,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--48
 
 
 
-[5]
+[7]
 
-[6]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
 
-[7]
+[9]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./document/chap04.tex
 
-[8]
+[10]
 
-[9]
+[11]
 4
 
 
-[10
+[12
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
@@ -1592,76 +1608,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 
 
-[11]
+[13]
 
-[12]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 
 
-[13]) (./document/chap05.tex
+[15]) (./document/chap05.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[14]
+[16]
 
-[15]
+[17]
 5
 
 
-[16
+[18
 
 ]
 
-[17]) (./document/chap06.tex
+[19]) (./document/chap06.tex
 
-[18]
+[20]
 6
 File: figures/1轴.pdf Graphic file (type pdf)
 <use figures/1轴.pdf>
 
 
-[19
+[21
 
 ]
-
-[20]
-
-[21]
-File: figures/1弯扭.pdf Graphic file (type pdf)
-<use figures/1弯扭.pdf>
-
 
 [22]
 
 [23]
+File: figures/1弯扭.pdf Graphic file (type pdf)
+<use figures/1弯扭.pdf>
+
 
 [24]
-File: figures/2轴.pdf Graphic file (type pdf)
-<use figures/2轴.pdf>
-
 
 [25]
 
 [26]
+File: figures/2轴.pdf Graphic file (type pdf)
+<use figures/2轴.pdf>
+
 
 [27]
+
+[28]
+
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
 
 
-[28]
+[30]
 File: figures/2弯扭.pdf Graphic file (type pdf)
 <use figures/2弯扭.pdf>
 
 
-[29]
+[31]
 Overfull \hbox (4.31265pt too wide) in paragraph at lines 459--463
 \TU/STSong(0)/m/n/12.045 低 速 轴 的 最 小 直 径 是 安 装 联 轴 器 处 轴 的 直 径 $\OML/cmm/m/it/12.045 d[]$\TU/STSong(0)/m/n/12.045 ，|  为 了 使 所 选 的 轴 直 径 $\OML/cmm/m/it/12.045 d[]$
  []
@@ -1673,57 +1689,57 @@ Overfull \hbox (4.5302pt too wide) in paragraph at lines 459--463
 
 
 
-[30]
+[32]
 File: figures/3轴.pdf Graphic file (type pdf)
 <use figures/3轴.pdf>
 
 
-[31]
+[33]
 
-[32]
+[34]
 Overfull \hbox (5.64464pt too wide) detected at line 562
 [][][]\OML/cmm/m/it/12.045 F[] \OT1/cmr/m/n/12.045 = [] = [] \OMS/cmsy/m/n/12.045 ^^Y ^^@\OT1/cmr/m/n/12.045 15460\OML/cmm/m/it/12.045 :\OT1/cmr/m/n/12.045 1[]
  []
 
 
 
-[33]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
 
 
-[34]
+[36]
 File: figures/2弯扭.pdf Graphic file (type pdf)
 <use figures/2弯扭.pdf>
 
 
-[35]) (./document/chap07.tex
+[37]) (./document/chap07.tex
 
-[36]
+[38]
 7
 ) (./document/chap08.tex
 
-[37
+[39
 
 ]
 8
 ) (./document/chap09.tex
 
-[38
+[40
 
 ]
 9
 ) (./document/chap10.tex
 
-[39
+[41
 
 ]
 10
 ) (./document/chap11.tex
 
-[40
+[42
 
 ]
 11
@@ -1733,7 +1749,7 @@ LaTeX Warning: Empty bibliography on input line 4.
 
 )
 
-[41
+[43
 
 ] (./HebutThesis_example.aux)
  ***********
@@ -1749,12 +1765,12 @@ Package logreq Info: Writing requests to 'HebutThesis_example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45995 strings out of 473832
- 995549 string characters out of 5729481
- 1969273 words of memory out of 5000000
- 68287 multiletter control sequences out of 15000+600000
+ 46040 strings out of 473832
+ 998145 string characters out of 5729481
+ 1969276 words of memory out of 5000000
+ 68331 multiletter control sequences out of 15000+600000
  576646 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,128p,1275b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HebutThesis_example.pdf (44 pages).
+Output written on HebutThesis_example.pdf (46 pages).
