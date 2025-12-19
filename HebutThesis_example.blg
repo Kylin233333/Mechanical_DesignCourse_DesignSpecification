@@ -1,9 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'HebutThesis_example.blg'
-[150] biber-MSWIN64:340> INFO - === 
-[201] Biber.pm:419> INFO - Reading 'HebutThesis_example.bcf'
-[397] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[418] bbl.pm:660> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
-[418] bbl.pm:763> INFO - Output to HebutThesis_example.bbl
-[418] Biber.pm:131> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
-[418] Biber.pm:133> INFO - WARNINGS: 1
+[85] biber-MSWIN64:340> INFO - === 
+[120] Biber.pm:419> INFO - Reading 'HebutThesis_example.bcf'
+[240] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
+[250] Biber.pm:4419> INFO - Processing section 0
+[260] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[307] bibtex.pm:1713> INFO - LaTeX decoding ...
+[312] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[341] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[341] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[341] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[341] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[343] bbl.pm:660> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
+[343] bbl.pm:763> INFO - Output to HebutThesis_example.bbl
