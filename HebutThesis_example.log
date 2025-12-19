@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.31)  18 DEC 2025 15:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.31)  18 DEC 2025 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1728,27 +1728,35 @@ File: figures/3弯扭.pdf Graphic file (type pdf)
 
 [39]
 7
-) (./document/chap08.tex
+
 
 [40
 
 ]
+
+[41]
+
+[42]
+
+[43]) (./document/chap08.tex
+
+[44]
 8
 ) (./document/chap09.tex
 
-[41
+[45
 
 ]
 9
 ) (./document/chap10.tex
 
-[42
+[46
 
 ]
 10
 ) (./document/chap11.tex
 
-[43
+[47
 
 ]
 11
@@ -1758,7 +1766,7 @@ LaTeX Warning: Empty bibliography on input line 4.
 
 )
 
-[44
+[48
 
 ] (./HebutThesis_example.aux)
  ***********
@@ -1774,12 +1782,12 @@ Package logreq Info: Writing requests to 'HebutThesis_example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46061 strings out of 473832
- 999112 string characters out of 5729481
- 1969277 words of memory out of 5000000
- 68351 multiletter control sequences out of 15000+600000
+ 46109 strings out of 473832
+ 1001905 string characters out of 5729481
+ 1969318 words of memory out of 5000000
+ 68399 multiletter control sequences out of 15000+600000
  576646 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,128p,1275b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HebutThesis_example.pdf (47 pages).
+Output written on HebutThesis_example.pdf (51 pages).

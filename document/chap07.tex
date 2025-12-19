@@ -1,1 +1,219 @@
-\chapter{轴承}
+\chapter{轴承的选择及校核计算}
+\section{工作要求寿命计算}
+\begin{equation}
+    L = 10\text{ Y} \times 270 \text{ D} \times 16\text{ H} = 4.32 \times 10^4 \text{ h}
+\end{equation}
+
+\section{轴承的选择}
+根据轴系设计结果，各轴选用的轴承型号及参数总结如下表\ref{tab:bearing-param}所示。
+
+\begin{table}[!ht]
+    \centering
+    \caption{轴承型号及参数表}
+    \label{tab:bearing-param}
+    \begin{tabular}{ccccccc}
+    \hline
+        轴 & 型号 & d  & D & B & 额定动载荷$C_r$(kN) & 额定静载荷$C_{0r}$(kN) \\ \hline
+        高速轴 & 30207 & 35 & 72 & 17 & 63.2 & 56 \\ 
+        中间轴 & 30206 & 30 & 62 & 16 & 50 & 44 \\ 
+        低速轴 & 30211 & 55 & 100 & 21 & 111 & 106 \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{高速轴轴承校核计算}
+\subsection{已知参数}
+高速轴选用单列圆锥滚子轴承 30207。
+\begin{itemize}
+    \item 转速 $n_1 = 1440 \text{ r/min}$。
+    \item 基本额定动载荷 $C_r = 63.2 \text{ kN} = 63200 \text{ N}$。
+    \item 查手册得轴承参数：判断系数 $e = 0.37$，轴向动载荷系数 $Y = 1.6$。
+    \item 载荷系数 $f_p = 1.2$，温度系数 $f_t = 1.0$。
+\end{itemize}
+
+\subsection{计算径向载荷}
+根据第六章计算结果，两侧轴承的支反力分别为：
+\begin{itemize}
+    \item 左轴承（1端）：$F_{NH1}=495.1 \text{ N}, F_{NV1}=238.3 \text{ N}$。
+    \item 右轴承（2端）：$F_{NH2}=1356.3 \text{ N}, F_{NV2}=455.7 \text{ N}$。
+\end{itemize}
+合成径向载荷：
+\begin{equation}
+    F_{r1} = \sqrt{F_{NH1}^2 + F_{NV1}^2} = \sqrt{495.1^2 + 238.3^2} \approx 549.4 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{r2} = \sqrt{F_{NH2}^2 + F_{NV2}^2} = \sqrt{1356.3^2 + 455.7^2} \approx 1430.8 \text{ N}
+\end{equation}
+
+\subsection{计算轴向载荷}
+1. 派生轴向力 $S$：
+\begin{equation}
+    S_1 = \frac{F_{r1}}{2Y} = \frac{549.4}{2 \times 1.6} = 171.7 \text{ N}
+\end{equation}
+\begin{equation}
+    S_2 = \frac{F_{r2}}{2Y} = \frac{1430.8}{2 \times 1.6} = 447.1 \text{ N}
+\end{equation}
+
+2. 轴向载荷 $F_a$：
+轴上外部轴向力 $F_{a1} = 455.1 \text{ N}$（方向指向左端，即指向轴承1）。
+判断压紧端：
+\begin{equation}
+    S_1 + F_{a1} = 171.7 + 455.1 = 626.8 \text{ N} > S_2 (447.1 \text{ N})
+\end{equation}
+故轴承 2 被“压紧”，轴承 1 被“放松”。
+各轴承的轴向载荷为：
+\begin{equation}
+    F_{a1} = S_1 = 171.7 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{a2} = S_1 + F_{a1} = 626.8 \text{ N}
+\end{equation}
+
+\subsection{计算当量动载荷}
+1. 轴承 1：
+$\frac{F_{a1}}{F_{r1}} = \frac{171.7}{549.4} = 0.31 < e$，故 $X=1, Y=0$。
+\begin{equation}
+    P_1 = f_p (X F_{r1} + Y F_{a1}) = 1.2 \times (1 \times 549.4 + 0) = 659.3 \text{ N}
+\end{equation}
+
+2. 轴承 2：
+$\frac{F_{a2}}{F_{r2}} = \frac{626.8}{1430.8} = 0.44 > e$，故 $X=0.4, Y=1.6$。
+\begin{equation}
+    P_2 = f_p (0.4 F_{r2} + 1.6 F_{a2}) = 1.2 \times (0.4 \times 1430.8 + 1.6 \times 626.8) \approx 1890.3 \text{ N}
+\end{equation}
+因 $P_2 > P_1$，故按轴承 2 进行寿命校核。
+
+\subsection{轴承寿命校核}
+\begin{equation}
+    L_{10h} = \frac{10^6}{60 n_1} \left( \frac{C_r}{P_2} \right)^{\frac{10}{3}} = \frac{10^6}{60 \times 1440} \left( \frac{63200}{1890.3} \right)^{3.33} \approx 1.34 \times 10^6 \text{ h}
+\end{equation}
+计算寿命远大于预期寿命，满足要求。
+
+\section{中间轴轴承校核计算}
+\subsection{已知参数}
+中间轴选用单列圆锥滚子轴承 30206。
+\begin{itemize}
+    \item 转速 $n_{II} = 409.09 \text{ r/min}$。
+    \item 基本额定动载荷 $C_r = 50 \text{ kN} = 50000 \text{ N}$。
+    \item 查手册得：$e = 0.37, Y = 1.6$。
+\end{itemize}
+
+\subsection{计算径向载荷}
+根据第六章计算结果：
+\begin{itemize}
+    \item 左轴承（A端）：$F_{AH}=-3034.0 \text{ N}, F_{AV}=1604.2 \text{ N}$。
+    \item 右轴承（D端）：$F_{DH}=483.7 \text{ N}, F_{DV}=-285 \text{ N}$。
+\end{itemize}
+合成径向载荷：
+\begin{equation}
+    F_{rA} = \sqrt{(-3034.0)^2 + 1604.2^2} \approx 3432.2 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{rD} = \sqrt{483.7^2 + (-285)^2} \approx 561.3 \text{ N}
+\end{equation}
+
+\subsection{计算轴向载荷}
+1. 派生轴向力 $S$：
+\begin{equation}
+    S_A = \frac{F_{rA}}{2Y} = \frac{3432.2}{3.2} = 1072.6 \text{ N}
+\end{equation}
+\begin{equation}
+    S_D = \frac{F_{rD}}{2Y} = \frac{561.3}{3.2} = 175.4 \text{ N}
+\end{equation}
+
+2. 轴向载荷 $F_a$：
+中间轴外部轴向力为两个齿轮轴向力之差方向相反以抵消：
+$F_{a\_net} = |F_{a3} - F_{a2}| = |1309.0 - 433.1| = 875.9 \text{ N}$。
+设合力方向指向左侧。
+判断：$S_D + F_{a\_net} = 175.4 + 875.9 = 1051.3 \text{ N} < S_A (1072.6 \text{ N})$。
+故轴承 A 被“压紧”。
+\begin{equation}
+    F_{aA} = S_A = 1072.6 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{aD} = S_A - F_{a\_net} = 1072.6 - 875.9 = 196.7 \text{ N}
+\end{equation}
+
+\subsection{计算当量动载荷}
+1. 轴承 A：
+$\frac{F_{aA}}{F_{rA}} = \frac{1072.6}{3432.2} = 0.31 < e$，故 $X=1, Y=0$。
+\begin{equation}
+    P_A = f_p F_{rA} = 1.2 \times 3432.2 = 4118.6 \text{ N}
+\end{equation}
+2. 轴承 D：
+$\frac{F_{aD}}{F_{rD}} = \frac{196.7}{561.3} = 0.35 < e$，故 $X=1, Y=0$。
+\begin{equation}
+    P_D = f_p F_{rD} = 1.2 \times 561.3 = 673.6 \text{ N}
+\end{equation}
+取 $P_A$ 进行校核。
+
+\subsection{轴承寿命校核}
+\begin{equation}
+    L_{10h} = \frac{10^6}{60 n_{II}} \left( \frac{C_r}{P_A} \right)^{\frac{10}{3}} = \frac{10^6}{60 \times 409.09} \left( \frac{50000}{4118.6} \right)^{3.33} \approx 1.6 \times 10^5 \text{ h}
+\end{equation}
+满足寿命要求。
+
+\section{低速轴轴承校核计算}
+\subsection{已知参数}
+低速轴选用单列圆锥滚子轴承 30211。
+\begin{itemize}
+    \item 转速 $n_{III} = 95.36 \text{ r/min}$。
+    \item 基本额定动载荷 $C_r = 111 \text{ kN} = 111000 \text{ N}$。
+    \item 查手册得：$e = 0.40, Y = 1.5$。
+\end{itemize}
+
+\subsection{计算径向载荷}
+根据第六章计算结果（含链轮压轴力）：
+\begin{itemize}
+    \item 左轴承（A端）：$F_{AH}=3640.6 \text{ N}, F_{AV}=-423.3 \text{ N}$。
+    \item 右轴承（B端）：$F_{BH}=-15460.1 \text{ N}, F_{BV}=-1454.8 \text{ N}$。
+\end{itemize}
+合成径向载荷：
+\begin{equation}
+    F_{rA} = \sqrt{3640.6^2 + (-423.3)^2} \approx 3665.1 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{rB} = \sqrt{(-15460.1)^2 + (-1454.8)^2} \approx 15528.4 \text{ N}
+\end{equation}
+
+\subsection{计算轴向载荷}
+1. 派生轴向力 $S$：
+\begin{equation}
+    S_A = \frac{F_{rA}}{2Y} = \frac{3665.1}{2 \times 1.5} = 1221.7 \text{ N}
+\end{equation}
+\begin{equation}
+    S_B = \frac{F_{rB}}{2Y} = \frac{15528.4}{2 \times 1.5} = 5176.1 \text{ N}
+\end{equation}
+
+2. 轴向载荷 $F_a$：
+外部轴向力 $F_{a4} = 1241.1 \text{ N}$（由齿轮受力分析，指向左端A）。
+判断：$S_A + F_{a4} = 1221.7 + 1241.1 = 2462.8 \text{ N} < S_B (5176.1 \text{ N})$。
+故轴承 B 被“压紧”。
+\begin{equation}
+    F_{aB} = S_B = 5176.1 \text{ N}
+\end{equation}
+\begin{equation}
+    F_{aA} = S_B - F_{a4} = 5176.1 - 1241.1 = 3935.0 \text{ N}
+\end{equation}
+
+\subsection{计算当量动载荷}
+1. 轴承 A：
+$\frac{F_{aA}}{F_{rA}} = \frac{3935.0}{3665.1} = 1.07 > e$，故 $X=0.4, Y=1.5$。
+\begin{equation}
+    P_A = f_p (0.4 F_{rA} + 1.5 F_{aA}) = 1.2 \times (0.4 \times 3665.1 + 1.5 \times 3935.0) \approx 8842.3 \text{ N}
+\end{equation}
+
+2. 轴承 B（受力最大端）：
+$\frac{F_{aB}}{F_{rB}} = \frac{5176.1}{15528.4} = 0.33 < e$，故 $X=1, Y=0$。
+\begin{equation}
+    P_B = f_p F_{rB} = 1.2 \times 15528.4 \approx 18634.1 \text{ N}
+\end{equation}
+因 $P_B > P_A$，故按轴承 B 校核。
+
+\subsection{轴承寿命校核}
+\begin{equation}
+    L_{10h} = \frac{10^6}{60 n_{III}} \left( \frac{C_r}{P_B} \right)^{\frac{10}{3}} = \frac{10^6}{60 \times 95.36} \left( \frac{111000}{18634.1} \right)^{3.33}
+\end{equation}
+\begin{equation}
+    L_{10h} \approx 174.7 \times (5.96)^{3.33} \approx 174.7 \times 378 \approx 6.6 \times 10^4 \text{ h}
+\end{equation}
+满足寿命要求，故低速轴轴承强度满足要求。
