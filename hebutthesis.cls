@@ -33,6 +33,8 @@
 \RequirePackage{tabularx}             % 使表格的列宽可以自动调整
 \RequirePackage{ifthen}               % 添加条件语句包
 \RequirePackage{hyperref}             % 提供超链接功能
+\RequirePackage{makecell}             % 用于创建复杂的表格单元格
+\RequirePackage{multirow}            % 用于创建跨多行的表格单元格
 
 \addbibresource{bibliography.bib}           % 指定参考文献数据库文件（.bib 文件）
 \allowdisplaybreaks                         % 允许在数学环境中自动进行跨页断行

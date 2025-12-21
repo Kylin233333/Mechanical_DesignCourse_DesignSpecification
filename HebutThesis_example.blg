@@ -1,6 +1,6 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'HebutThesis_example.blg'
-[24] biber-darwin:342> INFO - === Sun Dec 21, 2025, 20:42:37
+[24] biber-darwin:342> INFO - === Sun Dec 21, 2025, 21:40:33
 [31] Biber.pm:421> INFO - Reading 'HebutThesis_example.bcf'
 [68] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
 [73] bbl.pm:676> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
