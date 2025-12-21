@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.19)  21 DEC 2025 21:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.19)  21 DEC 2025 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1805,7 +1805,7 @@ LaTeX Warning: Empty bibliography on input line 4.
 
 ) [51
 
-] (./HebutThesis_example.aux)
+] [52] (./HebutThesis_example.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
@@ -1819,12 +1819,12 @@ Package logreq Info: Writing requests to 'HebutThesis_example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46416 strings out of 468179
- 1007657 string characters out of 5433206
- 1993120 words of memory out of 5000000
- 74356 multiletter control sequences out of 15000+600000
+ 46418 strings out of 468179
+ 1007669 string characters out of 5433206
+ 1992120 words of memory out of 5000000
+ 74358 multiletter control sequences out of 15000+600000
  645530 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,132p,1275b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HebutThesis_example.pdf (54 pages).
+Output written on HebutThesis_example.pdf (55 pages).
