@@ -220,7 +220,7 @@
 
 \parskip=0pt                  % 段落之间垂直距离为0
 \floatname{algorithm}{算法}   % 将 algorithm 环境的标题名称从默认的“Algorithm”更改为“算法”
-
+\setlength{\parindent}{2em}             % 设置首行缩进
 % 设置链接颜色
 \hypersetup{
   linkcolor=black,
