@@ -1,2 +1,39 @@
-\chapter{联轴器}
-测试引用1：\cite{HBGY202406012} 和测试引用2：\cite{test2025}
+\chapter{联轴器校核计算}
+\section{高速轴联轴器校核}
+\subsection{载荷计算}
+\begin{itemize}
+    \item 转速$n_1 = 1440$
+    \item 转矩$T_1=35.75N•m$
+\end{itemize}
+由表查得$K_A=1.3$，于是计算转矩为
+\begin{equation}
+T_{ca} = K_A\times T = 1.3\times 35.75 = 46.48 \text{ N} \cdot \text{m}
+\end{equation}
+\subsection{型号校核}
+选用LX3弹性柱销联轴器（GB/T 5014-2017），联轴器许用公称转矩$T_n=1250\text{ N} \cdot \text{m}$，
+许用最大转速为$[n]=4750r/min$，主动端孔直径$d=38mm$，轴孔长度$L=82mm$。
+从动端孔直径$d=30mm$，轴孔长度$L=82mm$。
+\begin{equation}
+T_{ca} = 46.48 \text{ N} \cdot \text{m} < T_n = 1250 \text{ N} \cdot \text{m}
+\end{equation}
+$n=1440 r/min<[n]=4750 r/min$
+联轴器满足要求，故合适。
+
+\section{低速轴联轴器校核}
+\subsection{载荷计算}
+\begin{itemize}
+    \item 转速$n_1 = 87.54$
+    \item 转矩$T_1 = 531.35N•m$
+\end{itemize}
+由表查得$K_A=1.3$，于是计算转矩为
+\begin{equation}
+T_{ca} = K_A\times T = 1.3\times 35.75 = 690.76 \text{ N} \cdot \text{m}
+\end{equation}
+\subsection{型号校核}
+选用LX3弹性柱销联轴器（GB/T 5014-2017），联轴器许用公称转矩$T_n=1250\text{ N} \cdot \text{m}$，
+许用最大转速为$[n]=4750r/min$，主动端孔直径$d=45mm$，轴孔长度$L=112mm$。
+\begin{equation}
+T_{ca}=690.76\text{ N} \cdot \text{m}<Tn=1250\text{ N} \cdot \text{m}
+\end{equation}
+$n=87.54 r/min<[n]=4750 r/min$
+联轴器满足要求，故合适。
