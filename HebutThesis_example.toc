@@ -147,5 +147,8 @@
 \contentsline {section}{\numberline {9.2}低速轴联轴器校核}{47}{section.9.2}%
 \contentsline {subsection}{\numberline {9.2.1}载荷计算}{47}{subsection.9.2.1}%
 \contentsline {subsection}{\numberline {9.2.2}型号校核}{47}{subsection.9.2.2}%
-\contentsline {chapter}{\numberline {10\hspace {.3em}}润滑}{49}{chapter.10}%
-\contentsline {chapter}{\numberline {11\hspace {.3em}}箱体}{50}{chapter.11}%
+\contentsline {chapter}{\numberline {10\hspace {.3em}}减速箱的密封和润滑}{49}{chapter.10}%
+\contentsline {section}{\numberline {10.1}减速箱密封}{49}{section.10.1}%
+\contentsline {section}{\numberline {10.2}齿轮的润滑}{49}{section.10.2}%
+\contentsline {section}{\numberline {10.3}轴承的润滑与密封}{50}{section.10.3}%
+\contentsline {chapter}{\numberline {11\hspace {.3em}}减速箱箱体附件及机体结构}{51}{chapter.11}%

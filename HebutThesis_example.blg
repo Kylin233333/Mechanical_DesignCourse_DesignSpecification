@@ -1,27 +1,9 @@
-<<<<<<< HEAD
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'HebutThesis_example.blg'
-[25] biber-darwin:342> INFO - === Sun Dec 21, 2025, 19:54:32
-[31] Biber.pm:421> INFO - Reading 'HebutThesis_example.bcf'
-[70] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[76] bbl.pm:676> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
-[76] bbl.pm:779> INFO - Output to HebutThesis_example.bbl
-[76] Biber.pm:132> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
-[76] Biber.pm:134> INFO - WARNINGS: 1
-=======
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'HebutThesis_example.blg'
-[83] biber-MSWIN64:340> INFO - === 
-[117] Biber.pm:419> INFO - Reading 'HebutThesis_example.bcf'
-[217] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
-[227] Biber.pm:4419> INFO - Processing section 0
-[235] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[280] bibtex.pm:1713> INFO - LaTeX decoding ...
-[284] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[312] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[313] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[313] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[313] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[314] bbl.pm:660> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
-[314] bbl.pm:763> INFO - Output to HebutThesis_example.bbl
->>>>>>> 1e2eb718a45fcb2a24f1e7b14146faed5d77d4b7
+[30] biber-darwin:342> INFO - === Sun Dec 21, 2025, 20:35:23
+[38] Biber.pm:421> INFO - Reading 'HebutThesis_example.bcf'
+[85] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[91] bbl.pm:676> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
+[91] bbl.pm:779> INFO - Output to HebutThesis_example.bbl
+[91] Biber.pm:132> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
+[91] Biber.pm:134> INFO - WARNINGS: 1
