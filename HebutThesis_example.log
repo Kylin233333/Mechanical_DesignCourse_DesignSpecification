@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.31)  22 DEC 2025 15:38
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.31)  22 DEC 2025 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1640,13 +1640,41 @@ File: figures/3弯扭.pdf Graphic file (type pdf)
 
 ]) (./document/chap11.tex [50]
 11
+File: figures/顶盖.pdf Graphic file (type pdf)
+<use figures/顶盖.pdf>
+File: figures/放油.pdf Graphic file (type pdf)
+<use figures/放油.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: figures/油标.pdf Graphic file (type pdf)
+<use figures/油标.pdf>
 [51
 
-]) (./document/bibliography.tex
+]
+File: figures/放气.pdf Graphic file (type pdf)
+<use figures/放气.pdf>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: figures/起盖.pdf Graphic file (type pdf)
+<use figures/起盖.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: figures/定位销.pdf Graphic file (type pdf)
+<use figures/定位销.pdf>
+[52]
+File: figures/吊耳.png Graphic file (type bmp)
+<figures/吊耳.png>
+File: figures/吊环.png Graphic file (type bmp)
+<figures/吊环.png>
+ [53]) (./document/bibliography.tex
 
 LaTeX Warning: Empty bibliography on input line 4.
 
-) [52] [53] (./HebutThesis_example.aux)
+) [54] [55] (./HebutThesis_example.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1660,12 +1688,12 @@ Package logreq Info: Writing requests to 'HebutThesis_example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46569 strings out of 474773
- 1006833 string characters out of 5761288
- 1964516 words of memory out of 5000000
- 67935 multiletter control sequences out of 15000+600000
+ 46648 strings out of 474773
+ 1008336 string characters out of 5761288
+ 1963808 words of memory out of 5000000
+ 68006 multiletter control sequences out of 15000+600000
  575878 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,18n,113p,1326b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HebutThesis_example.pdf (56 pages).
+Output written on HebutThesis_example.pdf (58 pages).
