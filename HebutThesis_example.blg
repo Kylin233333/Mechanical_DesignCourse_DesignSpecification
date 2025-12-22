@@ -2,8 +2,8 @@
 [0] Config.pm:310> INFO - Logfile is 'HebutThesis_example.blg'
 [80] biber-MSWIN64:340> INFO - === 
 [112] Biber.pm:419> INFO - Reading 'HebutThesis_example.bcf'
-[218] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[227] bbl.pm:660> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
-[228] bbl.pm:763> INFO - Output to HebutThesis_example.bbl
-[228] Biber.pm:131> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
-[228] Biber.pm:133> INFO - WARNINGS: 1
+[223] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[233] bbl.pm:660> INFO - Writing 'HebutThesis_example.bbl' with encoding 'UTF-8'
+[233] bbl.pm:763> INFO - Output to HebutThesis_example.bbl
+[233] Biber.pm:131> WARN - The file 'HebutThesis_example.bcf' does not contain any citations!
+[233] Biber.pm:133> INFO - WARNINGS: 1

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.31)  22 DEC 2025 19:37
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.31)  22 DEC 2025 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1688,10 +1688,10 @@ Package logreq Info: Writing requests to 'HebutThesis_example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46648 strings out of 474773
- 1008336 string characters out of 5761288
+ 46650 strings out of 474773
+ 1008398 string characters out of 5761288
  1963808 words of memory out of 5000000
- 68006 multiletter control sequences out of 15000+600000
+ 68008 multiletter control sequences out of 15000+600000
  575878 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,18n,113p,1326b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
