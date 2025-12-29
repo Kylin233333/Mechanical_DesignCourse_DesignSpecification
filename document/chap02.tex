@@ -4,7 +4,7 @@
 \section{确定传动装置的效率}
 查表得：
 \begin{itemize}
-    \item 链传动的效率：$\eta_{1}=0.93$
+    \item 链传动的效率：$\eta_{1}=0.92$
     \item 滚动轴承的效率：$\eta_{2}=0.98$
     \item 闭式圆柱齿轮的效率：$\eta_{3}=0.97$
     \item 联轴器的效率：$\eta_{c}=0.99$
@@ -13,7 +13,7 @@
 
 \begin{equation}
     \eta_a = \eta_1 \times \eta_2^4 \times \eta_3^2 \times \eta_c^2 \times \eta_{\omega}
-    = 0.93 \times 0.98^4 \times 0.97^2 \times 0.99^2 \times 0.96 \approx 0.7588
+    = 0.92 \times 0.98^4 \times 0.97^2 \times 0.99^2 \times 0.96 \approx 0.7588
 \end{equation}
 
 \section{选择电动机容量}
@@ -32,7 +32,7 @@
 \end{equation}
 按推荐的传动比合理范围,电动机转速的可选范围:
 \begin{equation}
-    n_d^{\text{'}} = i_a^{\text{'}} \times n = (16 ~ 240) \times 29.178 = (466.8 ~ 7002.7) \text{ r/min}
+    n_d^{\text{'}} = i_a^{\text{'}} \times n = (16 \sim 240) \times 29.178 = (466.8 \sim 7002.7) \text{ r/min}
 \end{equation}
 
 综合考虑电动机和传动装置的尺寸、重量、价格和链传动、减速器的传动比，选用电机型号为
@@ -68,7 +68,26 @@ Y132S-4
 
 \section{确定传动装置的总传动比和分配传动比}
 \subsection{总传动比的计算}
+\begin{equation}
+    i_a = \frac{n_m}{n_w} = \frac{1440}{29.178} \approx 49.36
+\end{equation}
 \subsection{分配传动装置传动比}
+\begin{equation}
+    i_{\alpha } = i_c \times i_a
+\end{equation}
+式中: $i_c$ 为链传动传动比，取 $i_c = 3$； $i_a$ 为减速器传动比，则
+\begin{equation}
+    i_a = \frac{i_{\alpha }}{i_c} = \frac{49.36}{3} \approx 16.45
+\end{equation}
+减速器传动比 $i_a$ 由两级闭式圆柱齿轮传动和联轴器组成，取各级传动比如下：
+\begin{itemize}
+    \item 第一级传动比 $i_{1} = 4.80$
+    \item 第二级传动比 $i_{2} = 3.42$
+\end{itemize}
+则总传动比为：
+\begin{equation}
+    i_{\alpha } = i_c \times i_a = 3.00 \times 4.80 \times 3.42 \times 3.00 = 49.34
+\end{equation}
 \section{动力学参数计算}
 
 \subsection{各轴转速计算}
@@ -77,7 +96,7 @@ Y132S-4
     \item \RMN{1}轴（高速轴）转速：
     \[ n_{\RMN{1}} = n_m = 1440 \, r/min \]
     \item \RMN{2}轴（中间轴）转速：
-    \[ n_{\RMN{2}} = \frac{n_I}{i_1} = \frac{1440}{4.80} = 300 \, r/min \]
+    \[ n_{\RMN{2}} = \frac{n_{\RMN{1}}}{i_1} = \frac{1440}{4.80} = 300 \, r/min \]
     \item \RMN{3}轴（低速轴）转速：
     \[ n_{\RMN{3}} = \frac{n_{\RMN{2}}}{i_2} = \frac{409.09}{3.42} = 87.54 \, r/min \]
     \item \RMN{4}轴（工作机轴）转速：
