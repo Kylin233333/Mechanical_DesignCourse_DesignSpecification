@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.run.xml
+*.synctex.gz
+*.toc
+*.out
+*.fdb_latexmk
+*.fls
+*.xdv
+
+# Output directory
+out/
+
+# Editors
+.vscode/
+
+# Claude
+.claude/
+CLAUDE.md
+.claude*
