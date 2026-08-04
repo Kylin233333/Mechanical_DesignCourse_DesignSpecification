@@ -42,3 +42,7 @@ xelatex HebutThesis_example
 ```bash
 latexmk -xelatex HebutThesis_example
 ```
+
+## 许可证
+
+本项目基于 [GPL v2.0 License](./LICENSE) 开源发布。
